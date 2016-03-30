@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="43817" started-at="2016-03-30T07:58:40Z" finished-at="2016-03-30T07:59:24Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="14947" started-at="2016-03-30T07:58:40Z" finished-at="2016-03-30T07:58:55Z">
+      <class name="testcases.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.LoginTest@27ec6a9a]" name="setup" is-config="true" duration-ms="9426" started-at="2016-03-30T15:58:40Z" finished-at="2016-03-30T15:58:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testlogin(org.w3c.dom.Document)[pri:0, instance:testcases.LoginTest@27ec6a9a]" name="testlogin" duration-ms="4073" started-at="2016-03-30T15:58:50Z" data-provider="Test_xml_dataprovider" finished-at="2016-03-30T15:58:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[#document: null]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.LoginTest@27ec6a9a]" name="teardown" is-config="true" duration-ms="1432" started-at="2016-03-30T15:58:54Z" finished-at="2016-03-30T15:58:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="28854" started-at="2016-03-30T07:58:55Z" finished-at="2016-03-30T07:59:24Z">
+      <class name="testcases.LoginDemo">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.LoginDemo@50628354]" name="beforeTest" is-config="true" duration-ms="7432" started-at="2016-03-30T15:58:55Z" finished-at="2016-03-30T15:59:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testlogin()[pri:0, instance:testcases.LoginDemo@50628354]" name="testlogin" duration-ms="20036" started-at="2016-03-30T15:59:03Z" finished-at="2016-03-30T15:59:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.LoginDemo@50628354]" name="afterTest" is-config="true" duration-ms="1382" started-at="2016-03-30T15:59:23Z" finished-at="2016-03-30T15:59:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- testcases.LoginDemo -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
