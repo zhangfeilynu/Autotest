@@ -23,7 +23,7 @@
     <path id="runpath"> 
          <path refid="run.classpath"/> 
          <pathelement location="build/classes"/> 
-       </path> 
+    </path> 
     <target name="run" depends="compile">
         <testng  classpathref="runpath"  outputDir="test-output">
             <xmlfileset dir="${basedir}" includes="testng.xml"/>
