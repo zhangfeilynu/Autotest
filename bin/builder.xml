@@ -16,7 +16,7 @@
     <target name="compile" depends="clean">
         <echo message="mkdir"/>
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" debug="on" encoding="GBK">
+        <javac srcdir="." destdir="build/classes" debug="on" encoding="GBK">
             <classpath refid="run.classpath"/>
         </javac>
     </target>
