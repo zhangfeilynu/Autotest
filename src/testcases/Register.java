@@ -10,7 +10,7 @@ import commonfunction.DataProvide;
 import commonfunction.DataReader;
 import commonfunction.RandomValue;
 
-/*×¢²áÕË»§*/
+/*æ³¨é”Ÿæ–¤æ‹·é”Ÿå‰¿ä¼™æ‹·*/
 
 
 public class Register extends DataProvide {
@@ -23,27 +23,27 @@ public class Register extends DataProvide {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
-		//ÉèÖÃÊı¾İÔ´
+		//è®¾ç½®æ•°æ®æº		
 		init("src/testdata/Register.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void reg(Document params) throws Exception {
-    	//ÊäÈëÓÃ»§Ãû
+    	//è¾“å…¥ç”¨æˆ·å
     	comfun.inputvalue("name","nickName",dr.readnodevalue(params,"reg","nickName"));
-    	//ÊäÈëÊÖ»úºÅ(Ëæ»ú²úÉú)
+    	//è¾“å…¥æ‰‹æœºå·ï¼ˆéšæœºç”Ÿæˆï¼‰
     	comfun.inputvalue("name","cellphone",RandomValue.getTel());
-    	//ÊäÈëÃÜÂë
+    	//è¾“å…¥å¯†ç 
     	comfun.inputvalue("name","password",dr.readnodevalue(params,"reg","password"));
-    	//ÊäÈëÍ¼Æ¬ÑéÖ¤Âë
+    	//è¾“å…¥å›¾ç‰‡éªŒè¯ç 
     	comfun.inputvalue("name","imgVerifyCode",dr.readnodevalue(params,"reg","imgVerifyCode"));
-    	//µã»÷»ñÈ¡°´Å¥£¬ÊäÈë¶ÌĞÅÑéÖ¤Âë
+    	//ç‚¹å‡»è·å–æŒ‰é’®ï¼Œè¾“å…¥çŸ­ä¿¡éªŒè¯ç 
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[4]/div/div[2]/div/button");
     	comfun.inputvalue("name","verificationCode",dr.readnodevalue(params,"reg","verificationCode"));
-    	//µã»÷Ãâ·Ñ×¢²á°´Å¥
+    	//ç‚¹å‡»å…è´¹æ³¨å†ŒæŒ‰é’®
     	comfun.clickitem("classname","button-block");
     	Thread.sleep(3000);
-    	//ÑéÖ¤×¢²á£¬Ìø×ªµ½´òÓ¡Ò³Ãæ
+    	//éªŒè¯æ³¨å†Œï¼Œè·³è½¬åˆ°æ‰“å°é¡µé¢ 
     	comfun.checkequal(CommonFunctions.driver.getCurrentUrl(),dr.readnodevalue(params,"reg","checkpoint1"));
     
     	
