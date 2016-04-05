@@ -20,7 +20,7 @@ public class Login extends DataProvide{
       comfun=new CommonFunctions(url);
       dr=new DataReader();
       //设置数据源
-      init("src/testdata/Login.xml");
+      init("testdata/Login.xml");
   }
   
   @Test(dataProvider="Test_xml_dataprovider") 

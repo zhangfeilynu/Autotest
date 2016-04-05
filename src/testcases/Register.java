@@ -21,7 +21,7 @@ public class Register extends DataProvide {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
-		init("src/testdata/Register.xml");
+		init("testdata/Register.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")

@@ -24,7 +24,7 @@ public class Order extends DataProvide {
 		comfun=new CommonFunctions(url);
 		dr=new DataReader();
 		//设置数据源
-		init("src/testdata/Order.xml");
+		init("testdata/Order.xml");
 	}
 	
 	@Test(dataProvider = "Test_xml_dataprovider")

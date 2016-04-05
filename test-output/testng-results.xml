@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34079" started-at="2016-04-05T13:07:06Z" finished-at="2016-04-05T13:07:40Z">
+  <suite name="Default suite" duration-ms="35611" started-at="2016-04-05T13:34:31Z" finished-at="2016-04-05T13:35:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34079" started-at="2016-04-05T13:07:06Z" finished-at="2016-04-05T13:07:40Z">
+    <test name="Default test" duration-ms="35611" started-at="2016-04-05T13:34:31Z" finished-at="2016-04-05T13:35:07Z">
       <class name="testcases.Login">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.Login@2993dfb0]" name="setup" is-config="true" duration-ms="19709" started-at="2016-04-05T21:07:06Z" finished-at="2016-04-05T21:07:25Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.Login@e445a89]" name="setup" is-config="true" duration-ms="26582" started-at="2016-04-05T21:34:31Z" finished-at="2016-04-05T21:34:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testlogin(org.w3c.dom.Document)[pri:0, instance:testcases.Login@2993dfb0]" name="testlogin" duration-ms="13265" started-at="2016-04-05T21:07:25Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-05T21:07:39Z">
+        <test-method status="PASS" signature="testlogin(org.w3c.dom.Document)[pri:0, instance:testcases.Login@e445a89]" name="testlogin" duration-ms="7846" started-at="2016-04-05T21:34:58Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-05T21:35:06Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.Login@2993dfb0]" name="teardown" is-config="true" duration-ms="1090" started-at="2016-04-05T21:07:39Z" finished-at="2016-04-05T21:07:40Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.Login@e445a89]" name="teardown" is-config="true" duration-ms="1181" started-at="2016-04-05T21:35:06Z" finished-at="2016-04-05T21:35:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
