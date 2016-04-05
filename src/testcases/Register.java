@@ -10,7 +10,7 @@ import commonfunction.DataProvide;
 import commonfunction.DataReader;
 import commonfunction.RandomValue;
 
-/*注锟斤拷锟剿伙拷*/
+
 
 
 public class Register extends DataProvide {
@@ -23,7 +23,6 @@ public class Register extends DataProvide {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
-		//设置数据源		
 		init("src/testdata/Register.xml");
 	}
 	
