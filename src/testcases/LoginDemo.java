@@ -44,7 +44,7 @@ public class LoginDemo {
 	  driver.findElement(By.className("button-submit")).click();
 	  Thread.sleep(5000);
 	  String title=driver.findElement(By.className("logo-title")).getText();
-	  assertEquals(title,"ÎÒµÄÊÕÒøÌ¨");
+	  assertEquals(title,"æˆ‘çš„æ”¶é“¶å°");
 	
 
 }
