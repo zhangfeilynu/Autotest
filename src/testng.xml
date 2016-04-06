@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+  <test name="Login">
+    <classes>
+      <class name="testcases.Login"/>
+      </classes>
+  </test> <!-- Login --> 
+  <test name="Register">
+    <classes>
+      <class name="testcases.Register"/>
+    </classes>
+  </test> <!-- Register --> 
+  <test name="Order">
+    <classes>
+      <class name="testcases.Order"/>
+    </classes>
+  </test> <!-- Order--> 
+  <test name="Room">
+    <classes>
+      <class name="testcases.Room"/>
+    </classes>
+  </test> <!--Room-->  
+</suite> <!-- Suite -->
