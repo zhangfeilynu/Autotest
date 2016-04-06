@@ -2,11 +2,12 @@
 <project name="TestNGDemo" default="run" basedir=".">
     <echo  message="import libs" />
     <path id="run.classpath">
-        <fileset dir="${basedir}">
-            <include name="lib/testng.jar" />
-            <include name="lib/selenium-java-2.52.0.jar" />
-            <include name="lib/selenium-java-2.52.0-srcs.jar" />
-            <include name="lib/selenium-server-standalone-2.52.0.jar" />
+        <fileset dir="${basedir}/src/lib">
+            <include name="testng.jar" />
+            <include name="selenium-java-2.52.0.jar" />
+            <include name="selenium-java-2.52.0-srcs.jar" />
+            <include name="selenium-server-standalone-2.52.0.jar" />
+        	<include name="*.jar" />
         </fileset>
     </path>
     <taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
