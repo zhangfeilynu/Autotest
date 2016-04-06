@@ -3,7 +3,9 @@ package commonfunction;
 //import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.*;
@@ -20,7 +22,11 @@ public class CommonFunctions {
 	
 	public CommonFunctions(String url){
 		//创建Firefox浏览器实例
+		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
+		//driver= new ChromeDriver();
 		driver=new FirefoxDriver();
+		//System.setProperty("webdriver.ie.driver", "D:\\work\\selenium\\tools\\IEDriverServer.exe");
+		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
 		

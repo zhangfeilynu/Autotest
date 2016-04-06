@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name= "testTng" basedir= "." default="transform">
+<project name= "testTng" basedir= "src" default="transform">
 <property name= "lib.dir" value= "lib" />
 <path id= "test.classpath" >
 <!-- adding the saxon jar to your classpath -->
