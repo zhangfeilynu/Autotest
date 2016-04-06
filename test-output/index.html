@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">4 tests</span>
+                    <span class="test-stats">7 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Login" hash-for-method="testlogin([#document: null])">testlogin([#document: null])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Order" hash-for-method="testorder([#document: null])">testorder([#document: null])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Room" hash-for-method="testroom([#document: null])">testroom([#document: null])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,21 +127,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Register" hash-for-method="reg([#document: null])">reg([#document: null])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Login" hash-for-method="testlogin([#document: null])">testlogin([#document: null])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Order" hash-for-method="testorder([#document: null])">testorder([#document: null])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Room" hash-for-method="testroom([#document: null])">testroom([#document: null])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,9 +141,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testcases.Order</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,13 +153,43 @@
                   </a> <!-- testorder([#document: null]) -->
                   <span class="method-name">testorder</span>
                   <span class="parameters">([#document: null])</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;class name&quot;,&quot;selector&quot;:&quot;logo-title&quot;}
+Command duration or timeout: 27 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
+System info: host: &apos;USER-20160327TR&apos;, ip: &apos;192.168.31.230&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+*** Element info: {Using=class name, value=logo-title}
+Session ID: 40b94644-c7e7-4428-b7e1-8e236eb9b98c
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=45.0.1}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:477)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at commonfunction.CommonFunctions.gettext(CommonFunctions.java:69)
+	at testcases.Order.testorder(Order.java:49)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;class name&quot;,&quot;selector&quot;:&quot;logo-title&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
+System info: host: &apos;USER-20160327TR&apos;, ip: &apos;192.168.31.230&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous8056197550214992752webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous8056197550214992752webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous8056197550214992752webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous8056197550214992752webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous8056197550214992752webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testcases.Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -160,10 +199,63 @@
                   </a> <!-- testlogin([#document: null]) -->
                   <span class="method-name">testlogin</span>
                   <span class="parameters">([#document: null])</span>
+                  <div class="stack-trace">org.junit.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[随米用户_7720]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at commonfunction.CommonFunctions.checkequal(CommonFunctions.java:176)
+	at testcases.Login.testlogin(Login.java:33)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.Room</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testroom([#document: null])">
+                  </a> <!-- testroom([#document: null]) -->
+                  <span class="method-name">testroom</span>
+                  <span class="parameters">([#document: null])</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;app&apos;]/div/div[1]/div/div/a&quot;}
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
+System info: host: &apos;USER-20160327TR&apos;, ip: &apos;192.168.31.230&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+*** Element info: {Using=xpath, value=.//*[@id=&apos;app&apos;]/div/div[1]/div/div/a}
+Session ID: de9e94ef-4a08-4d42-bc77-e86643c464c1
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=45.0.1}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at commonfunction.CommonFunctions.clickitem(CommonFunctions.java:92)
+	at testcases.Room.testroom(Room.java:37)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;app&apos;]/div/div[1]/div/div/a&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
+System info: host: &apos;USER-20160327TR&apos;, ip: &apos;192.168.31.230&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3988300647459761751webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3988300647459761751webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3988300647459761751webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3988300647459761751webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous3988300647459761751webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -175,22 +267,6 @@
                   <a name="reg([#document: null])">
                   </a> <!-- reg([#document: null]) -->
                   <span class="method-name">reg</span>
-                  <span class="parameters">([#document: null])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.Room</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testroom([#document: null])">
-                  </a> <!-- testroom([#document: null]) -->
-                  <span class="method-name">testroom</span>
                   <span class="parameters">([#document: null])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -226,6 +302,93 @@
       &lt;class name=&quot;testcases.Room&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Room --&gt;
+  &lt;test name=&quot;Login(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.Order&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Order --&gt;
+      &lt;class name=&quot;testcases.Login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testlogin&quot; invocation-numbers=&quot;0&quot;/&gt;
+          &lt;include name=&quot;setup&quot;/&gt;
+          &lt;include name=&quot;teardown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Login --&gt;
+      &lt;class name=&quot;testcases.Room&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Room --&gt;
+      &lt;class name=&quot;testcases.Register&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Register --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login(failed) --&gt;
+  &lt;test name=&quot;Order(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.Order&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+          &lt;include name=&quot;testorder&quot; invocation-numbers=&quot;0&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Order --&gt;
+      &lt;class name=&quot;testcases.Login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setup&quot;/&gt;
+          &lt;include name=&quot;teardown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Login --&gt;
+      &lt;class name=&quot;testcases.Room&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Room --&gt;
+      &lt;class name=&quot;testcases.Register&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Register --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Order(failed) --&gt;
+  &lt;test name=&quot;Room(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.Order&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Order --&gt;
+      &lt;class name=&quot;testcases.Login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setup&quot;/&gt;
+          &lt;include name=&quot;teardown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Login --&gt;
+      &lt;class name=&quot;testcases.Register&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Register --&gt;
+      &lt;class name=&quot;testcases.Room&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testroom&quot; invocation-numbers=&quot;0&quot;/&gt;
+          &lt;include name=&quot;beforeClass&quot;/&gt;
+          &lt;include name=&quot;afterClass&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.Room --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Room(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,6 +410,15 @@
               </li>
               <li>
                 <span class="test-name">Room (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login(failed) (4 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Order(failed) (4 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Room(failed) (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -276,24 +448,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testorder')
 data.setCell(0, 2, 'testcases.Order')
-data.setCell(0, 3, 84675);
+data.setCell(0, 3, 24266);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testroom')
 data.setCell(1, 2, 'testcases.Room')
-data.setCell(1, 3, 15985);
+data.setCell(1, 3, 8920);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testlogin')
-data.setCell(2, 2, 'testcases.Login')
-data.setCell(2, 3, 4741);
+data.setCell(2, 1, 'reg')
+data.setCell(2, 2, 'testcases.Register')
+data.setCell(2, 3, 4863);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'reg')
-data.setCell(3, 2, 'testcases.Register')
-data.setCell(3, 3, 4383);
+data.setCell(3, 1, 'testlogin')
+data.setCell(3, 2, 'testcases.Login')
+data.setCell(3, 3, 4049);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -325,57 +497,63 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testlogin([#document: null])</span>
-                <span class="method-start">9063 ms</span>
+                <span class="method-start">9531 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">13805 ms</span>
+                <span class="method-start">13587 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Register</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">14980 ms</span>
+                <span class="method-start">15070 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">reg([#document: null])</span>
-                <span class="method-start">23364 ms</span>
+                <span class="method-start">23313 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">27749 ms</span>
+                <span class="method-start">28177 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Order</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">28854 ms</span>
+                <span class="method-start">29288 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testorder([#document: null])</span>
-                <span class="method-start">37845 ms</span>
+                <span class="method-start">39338 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">122521 ms</span>
+                <span class="method-start">63633 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Room</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">123930 ms</span>
+                <span class="method-start">64754 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testroom([#document: null])</span>
-                <span class="method-start">133943 ms</span>
+                <span class="method-start">72955 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">149929 ms</span>
+                <span class="method-start">81878 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
