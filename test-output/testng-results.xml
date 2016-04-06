@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="73966" started-at="2016-04-06T10:42:21Z" finished-at="2016-04-06T10:43:35Z">
+  <suite name="Suite" duration-ms="69936" started-at="2016-04-06T11:09:10Z" finished-at="2016-04-06T11:10:20Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="10298" started-at="2016-04-06T10:42:21Z" finished-at="2016-04-06T10:42:31Z">
+    <test name="Login" duration-ms="10248" started-at="2016-04-06T11:09:10Z" finished-at="2016-04-06T11:09:20Z">
       <class name="testcases.Login">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.Login@ed03465]" name="setup" is-config="true" duration-ms="5377" started-at="2016-04-06T18:42:21Z" finished-at="2016-04-06T18:42:26Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.Login@71fda7c]" name="setup" is-config="true" duration-ms="5259" started-at="2016-04-06T19:09:10Z" finished-at="2016-04-06T19:09:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testlogin(org.w3c.dom.Document)[pri:0, instance:testcases.Login@ed03465]" name="testlogin" duration-ms="3762" started-at="2016-04-06T18:42:26Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T18:42:30Z">
+        <test-method status="PASS" signature="testlogin(org.w3c.dom.Document)[pri:0, instance:testcases.Login@71fda7c]" name="testlogin" duration-ms="3887" started-at="2016-04-06T19:09:15Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T19:09:19Z">
           <params>
             <param index="0">
               <value>
@@ -22,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.Login@ed03465]" name="teardown" is-config="true" duration-ms="1148" started-at="2016-04-06T18:42:30Z" finished-at="2016-04-06T18:42:31Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.Login@71fda7c]" name="teardown" is-config="true" duration-ms="1089" started-at="2016-04-06T19:09:19Z" finished-at="2016-04-06T19:09:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testcases.Login -->
     </test> <!-- Login -->
-    <test name="Register" duration-ms="9103" started-at="2016-04-06T10:42:31Z" finished-at="2016-04-06T10:42:40Z">
+    <test name="Register" duration-ms="8971" started-at="2016-04-06T11:09:20Z" finished-at="2016-04-06T11:09:29Z">
       <class name="testcases.Register">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register@3ddda70f]" name="beforeClass" is-config="true" duration-ms="4509" started-at="2016-04-06T18:42:31Z" finished-at="2016-04-06T18:42:36Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register@2302e984]" name="beforeClass" is-config="true" duration-ms="4319" started-at="2016-04-06T19:09:20Z" finished-at="2016-04-06T19:09:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="reg(org.w3c.dom.Document)[pri:0, instance:testcases.Register@3ddda70f]" name="reg" duration-ms="3610" started-at="2016-04-06T18:42:36Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T18:42:39Z">
+        <test-method status="PASS" signature="reg(org.w3c.dom.Document)[pri:0, instance:testcases.Register@2302e984]" name="reg" duration-ms="3615" started-at="2016-04-06T19:09:24Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T19:09:28Z">
           <params>
             <param index="0">
               <value>
@@ -45,19 +45,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reg -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Register@3ddda70f]" name="afterClass" is-config="true" duration-ms="980" started-at="2016-04-06T18:42:39Z" finished-at="2016-04-06T18:42:40Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Register@2302e984]" name="afterClass" is-config="true" duration-ms="1033" started-at="2016-04-06T19:09:28Z" finished-at="2016-04-06T19:09:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- testcases.Register -->
     </test> <!-- Register -->
-    <test name="Order" duration-ms="32892" started-at="2016-04-06T10:42:40Z" finished-at="2016-04-06T10:43:13Z">
+    <test name="Order" duration-ms="30432" started-at="2016-04-06T11:09:29Z" finished-at="2016-04-06T11:09:59Z">
       <class name="testcases.Order">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Order@67265201]" name="beforeClass" is-config="true" duration-ms="6532" started-at="2016-04-06T18:42:40Z" finished-at="2016-04-06T18:42:47Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Order@4d1f48f]" name="beforeClass" is-config="true" duration-ms="4383" started-at="2016-04-06T19:09:29Z" finished-at="2016-04-06T19:09:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testorder(org.w3c.dom.Document)[pri:0, instance:testcases.Order@67265201]" name="testorder" duration-ms="25103" started-at="2016-04-06T18:42:47Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T18:43:12Z">
+        <test-method status="PASS" signature="testorder(org.w3c.dom.Document)[pri:0, instance:testcases.Order@4d1f48f]" name="testorder" duration-ms="24949" started-at="2016-04-06T19:09:33Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T19:09:58Z">
           <params>
             <param index="0">
               <value>
@@ -68,19 +68,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testorder -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Order@67265201]" name="afterClass" is-config="true" duration-ms="1254" started-at="2016-04-06T18:43:12Z" finished-at="2016-04-06T18:43:13Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Order@4d1f48f]" name="afterClass" is-config="true" duration-ms="1098" started-at="2016-04-06T19:09:58Z" finished-at="2016-04-06T19:09:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- testcases.Order -->
     </test> <!-- Order -->
-    <test name="Room" duration-ms="21645" started-at="2016-04-06T10:43:13Z" finished-at="2016-04-06T10:43:35Z">
+    <test name="Room" duration-ms="20258" started-at="2016-04-06T11:09:59Z" finished-at="2016-04-06T11:10:20Z">
       <class name="testcases.Room">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Room@7b1a5d31]" name="beforeClass" is-config="true" duration-ms="4609" started-at="2016-04-06T18:43:13Z" finished-at="2016-04-06T18:43:18Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Room@7fdc7b1a]" name="beforeClass" is-config="true" duration-ms="4495" started-at="2016-04-06T19:09:59Z" finished-at="2016-04-06T19:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testroom(org.w3c.dom.Document)[pri:0, instance:testcases.Room@7b1a5d31]" name="testroom" duration-ms="15969" started-at="2016-04-06T18:43:18Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T18:43:34Z">
+        <test-method status="PASS" signature="testroom(org.w3c.dom.Document)[pri:0, instance:testcases.Room@7fdc7b1a]" name="testroom" duration-ms="14743" started-at="2016-04-06T19:10:04Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-06T19:10:19Z">
           <params>
             <param index="0">
               <value>
@@ -91,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testroom -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Room@7b1a5d31]" name="afterClass" is-config="true" duration-ms="1064" started-at="2016-04-06T18:43:34Z" finished-at="2016-04-06T18:43:35Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Room@7fdc7b1a]" name="afterClass" is-config="true" duration-ms="1019" started-at="2016-04-06T19:10:19Z" finished-at="2016-04-06T19:10:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

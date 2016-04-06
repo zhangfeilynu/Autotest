@@ -31,6 +31,7 @@ public class Order extends DataProvide {
     public void testorder(Document params)throws Exception {
 		//登录
 		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
+		Thread.sleep(3000);
 		comfun.login(dr.readnodevalue(params,"upload","username"), dr.readnodevalue(params,"upload","password"));
 		//切换到打印页面
 		comfun.clickitem("xpath", "//*[@id='app']/div/div[1]/nav/ul[1]/li[2]/a");
