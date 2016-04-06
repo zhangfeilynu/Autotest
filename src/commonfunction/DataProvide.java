@@ -11,15 +11,15 @@ public Document doc;
 public void init(String filename) throws Exception
 {
     File inputXml = new File(new File(filename).getAbsolutePath());
-    // documentBuilder为抽象不能直接实例化(将XML文件转换为DOM文件)
+    // documentBuilder涓烘娊璞′笉鑳界洿鎺ュ疄渚嬪寲(灏哫ML鏂囦欢杞崲涓篋OM鏂囦欢)
     DocumentBuilder db = null;
     DocumentBuilderFactory dbf = null;
     try {
-        // 返回documentBuilderFactory对象
+        // 杩斿洖documentBuilderFactory瀵硅薄
         dbf = DocumentBuilderFactory.newInstance();
-        // 返回db对象用documentBuilderFatory对象获得返回documentBuildr对象
+        // 杩斿洖db瀵硅薄鐢╠ocumentBuilderFatory瀵硅薄鑾峰緱杩斿洖documentBuildr瀵硅薄
         db = dbf.newDocumentBuilder();
-        // 得到一个DOM并返回给document对象
+        // 寰楀埌涓�涓狣OM骞惰繑鍥炵粰document瀵硅薄
         doc = (Document)db.parse(inputXml);
         }
         catch (Exception e) {

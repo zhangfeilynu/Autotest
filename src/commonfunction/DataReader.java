@@ -1,13 +1,13 @@
 package commonfunction;
 import org.w3c.dom.*;
 public class DataReader {
-/**
-* ´ÓXmlÖĞ»ñÈ¡ÏàÓ¦µÄ½ÚµãµÄÊı¾İ
-* @param doc Êı¾İÎÄ¼şµÄDocument
-* @param firsttag ×Ó½Úµã
-* @param secondtag Òª»ñÈ¡µÄÔªËØµÄ½Úµã
-* @return Òª²éÕÒµÄ½ÚµãÊı¾İ
-*/
+	/**
+	* ä»Xmlä¸­è·å–ç›¸åº”çš„èŠ‚ç‚¹çš„æ•°æ®
+	* @param doc æ•°æ®æ–‡ä»¶çš„Document
+	* @param firsttag å­èŠ‚ç‚¹
+	* @param secondtag è¦è·å–çš„å…ƒç´ çš„èŠ‚ç‚¹
+	* @return è¦æŸ¥æ‰¾çš„èŠ‚ç‚¹æ•°æ®
+	*/
     public String readnodevalue(Document doc,String firsttag,String secondtag)
     {
         String result="";

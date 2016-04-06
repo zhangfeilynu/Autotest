@@ -10,24 +10,24 @@ import static org.junit.Assert.*;
 
 
 public class CommonFunctions {
-	/*³ÌĞò¹«ÓÃº¯Êı*/
+	/*ç¨‹åºå…¬ç”¨å‡½æ•°*/
 	static public WebDriver driver;
 	
-	/*¹¹Ôìº¯Êı*/
+	/*æ„é€ å‡½æ•°*/
 	public CommonFunctions(){
 		
 	}
 	
 	public CommonFunctions(String url){
-		//´´½¨Firefoxä¯ÀÀÆ÷ÊµÀı
+		//åˆ›å»ºFirefoxæµè§ˆå™¨å®ä¾‹
 		driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
 		
 	}
 	
-	/*´ò¿ªÍøÒ³
-	@param url Òª´ò¿ªµÄURL
+	/*æ‰“å¼€ç½‘é¡µ
+	@param url è¦æ‰“å¼€çš„URL
 	@throws Exception*/
 	public void geturl(String url) throws Exception
 	{
@@ -35,7 +35,7 @@ public class CommonFunctions {
 		Thread.sleep(3000);		
 	}
 	
-	/*ÍË³öä¯ÀÀÆ÷*/
+	/*é€€å‡ºæµè§ˆå™¨*/
 	public void teardown(){
 		try{
 			driver.quit();
@@ -45,10 +45,10 @@ public class CommonFunctions {
 	}
 	
 	/**
-	* »ñÈ¡Ò³Ãæ±êÇ©
-	* @param type ÔªËØ¶¨Î»ÀàĞÍ£¬Èç£ºXpath,css,nameµÈ
-	* @param location ÔªËØÎ»ÖÃ
-	* @return ·µ»Ø»ñÈ¡µ½µÄÒ³ÃæÔªËØµÄÎÄ±¾
+	* è·å–é¡µé¢æ ‡ç­¾
+	* @param type å…ƒç´ å®šä½ç±»å‹ï¼Œå¦‚ï¼šXpath,css,nameç­‰
+	* @param location å…ƒç´ ä½ç½®
+	* @return è¿”å›è·å–åˆ°çš„é¡µé¢å…ƒç´ çš„æ–‡æœ¬
 	*/
 	public String gettext(String type,String location)
 	{
@@ -81,9 +81,9 @@ public class CommonFunctions {
     }
 	
 	/**
-	* µ¥»÷Ä³¸öÔªËØ
-	* @param type ÔªËØ¶¨Î»ÀàĞÍ£¬Èç£ºXpath,css,nameµÈ
-	* @param location ÔªËØÎ»ÖÃ
+	* å•å‡»æŸä¸ªå…ƒç´ 
+	* @param type å…ƒç´ å®šä½ç±»å‹ï¼Œå¦‚ï¼šXpath,css,nameç­‰
+	* @param location å…ƒç´ ä½ç½®
 	*/
 	public void clickitem(String type,String location){
 		
@@ -116,9 +116,9 @@ public class CommonFunctions {
 	}
 	
 	/**
-	* Çå³ıÎÄ±¾¿òÖĞµÄÄÚÈİ
-	* @param type ÔªËØ¶¨Î»ÀàĞÍ£¬Èç£ºXpath,css,nameµÈ
-	* @param location ÔªËØÎ»ÖÃ
+	* æ¸…é™¤æ–‡æœ¬æ¡†ä¸­çš„å†…å®¹
+	* @param type å…ƒç´ å®šä½ç±»å‹ï¼Œå¦‚ï¼šXpath,css,nameç­‰
+	* @param location å…ƒç´ ä½ç½®
 	*/
 	public void clearvalue(String type,String location){
 		WebElement elem=null;
@@ -133,10 +133,10 @@ public class CommonFunctions {
 	}
 	
 	/**
-	* ÏòÎÄ±¾¿òÖĞÊäÈëÎÄ×Ö
-	* @param type ÔªËØ¶¨Î»ÀàĞÍ£¬Èç£ºXpath,css,nameµÈ
-	* @param location ÔªËØÎ»ÖÃ
-	* @param text ÒªÊäÈëµÄÄÚÈİ
+	* å‘æ–‡æœ¬æ¡†ä¸­è¾“å…¥æ–‡å­—
+	* @param type å…ƒç´ å®šä½ç±»å‹ï¼Œå¦‚ï¼šXpath,css,nameç­‰
+	* @param location å…ƒç´ ä½ç½®
+	* @param text è¦è¾“å…¥çš„å†…å®¹
 	*/
 	public void inputvalue(String type,String location,String text){
 		WebElement elem=null;
@@ -168,18 +168,18 @@ public class CommonFunctions {
 	}
 	
 	/**
-	* ÅĞ¶Ïstr1ºÍstr2ÊÇ·ñÏàµÈ
-	* @param str1 Ô´×Ö·û´®
-	* @param str2 Ä¿±ê×Ö·û´®
+	* åˆ¤æ–­str1å’Œstr2æ˜¯å¦ç›¸ç­‰
+	* @param str1 æºå­—ç¬¦ä¸²
+	* @param str2 ç›®æ ‡å­—ç¬¦ä¸²
 	*/
 	public void checkequal(String str1,String str2){
 		assertEquals(str1,str2);
 	}
 	
 	/**
-	* µÇÂ¼²Ù×÷
-	* @param name:ÓÃ»§Ãû
-	* @param psd:ÃÜÂë
+	* ç™»å½•æ“ä½œ
+	* @param name:ç”¨æˆ·å
+	* @param psd:å¯†ç 
 	* @throws Exception
 	*/
 	public void login(String name,String psd) throws Exception{

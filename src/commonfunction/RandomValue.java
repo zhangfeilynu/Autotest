@@ -12,7 +12,7 @@ public class RandomValue {
     }  
 	
 	
-	//返回手机号码
+	//杩斿洖鎵嬫満鍙风爜
 	public static String getTel() {  
 	    int index=getNum(0,telFirst.length-1);  
 	    String first=telFirst[index];  
