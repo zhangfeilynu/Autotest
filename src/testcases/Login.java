@@ -8,7 +8,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*µÇÂ¼*/
+/*ç™»å½•*/
 
 public class Login extends DataProvide{
      public CommonFunctions comfun;
@@ -19,14 +19,14 @@ public class Login extends DataProvide{
       String url = "http://test2.sui.me/";
       comfun=new CommonFunctions(url);
       dr=new DataReader();
-      //ÉèÖÃÊı¾İÔ´
-      init("testdata/Login.xml");
+      //è®¾ç½®æ•°æ®æº
+      init("src/testdata/Login.xml");
   }
   
   @Test(dataProvider="Test_xml_dataprovider") 
   public void testlogin(Document params) throws Exception {
    /**
-    * ¼ì²âµÇÂ¼
+    * ç™»å½•ï¼Œå¹¶æ£€æµ‹ç™»å½•ï¼ˆç”¨æˆ·åï¼‰
     */
       comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
       comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));

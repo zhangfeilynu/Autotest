@@ -9,7 +9,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*Ñ¡ÔñËŞÉá*/
+/*é€‰æ‹©å®¿èˆ*/
 
 
 public class Room extends DataProvide {
@@ -22,17 +22,17 @@ public class Room extends DataProvide {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
-		//ÉèÖÃÊı¾İÔ´
-		init("testdata/Room.xml");
+		//è®¾ç½®æ•°æ®æº
+		init("src/testdata/Room.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testroom(Document params) throws Exception {
-    	//µÇÂ¼
+    	//ç™»å½•
     	comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
     	Thread.sleep(2000);
     	comfun.login(dr.readnodevalue(params,"login","username"), dr.readnodevalue(params,"login","password"));
-    	//Ñ¡ÔñÑ§Ğ£¡¢ËŞÉá
+    	//é€‰æ‹©å­¦æ ¡ã€å®¿èˆ
     	Thread.sleep(3000);
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[1]/div/div/a");
     	Thread.sleep(1000);

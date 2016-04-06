@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Login">
     <classes>
       <class name="testcases.Login"/>
     </classes>
-  </test> <!-- Default test -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Login -->
+  <test name="Register">
+    <classes>
+      <class name="testcases.Register"/>
+    </classes>
+  </test> <!-- Register -->
+  <test name="Order">
+    <classes>
+      <class name="testcases.Order"/>
+    </classes>
+  </test> <!-- Order -->
+  <test name="Room">
+    <classes>
+      <class name="testcases.Room"/>
+    </classes>
+  </test> <!-- Room -->
+</suite> <!-- Failed suite [Suite] -->

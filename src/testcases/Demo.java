@@ -9,7 +9,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*×¢²áÕË»§*/
+/*æ³¨å†Œè´¦å·*/
 
 
 public class Demo extends DataProvide {
@@ -22,7 +22,7 @@ public class Demo extends DataProvide {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
-		//ÉèÖÃÊı¾İÔ´
+		//è®¾ç½®æ•°æ®æº
 		init("src/testdata/Register.xml");
 	}
 	

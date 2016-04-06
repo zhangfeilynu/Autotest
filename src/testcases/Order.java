@@ -9,7 +9,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*µÇÂ¼Ö®ºó£¬ÉÏ´«ÎÄµµ£¬½áËãÏÂµ¥*/
+/*ç™»å½•ä¹‹åï¼Œä¸Šä¼ æ–‡æ¡£ï¼Œç»“ç®—ä¸‹å•*/
 
 public class Order extends DataProvide {
 	
@@ -19,34 +19,34 @@ public class Order extends DataProvide {
   
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		//´ò¿ªÍøÒ³
+		//æ‰“å¼€ç½‘é¡µ
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr=new DataReader();
-		//ÉèÖÃÊı¾İÔ´
-		init("testdata/Order.xml");
+		//è®¾ç½®æ•°æ®æº
+		init("src/testdata/Order.xml");
 	}
 	
 	@Test(dataProvider = "Test_xml_dataprovider")
     public void testorder(Document params)throws Exception {
-		//µÇÂ¼
+		//ç™»å½•
 		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
 		comfun.login(dr.readnodevalue(params,"upload","username"), dr.readnodevalue(params,"upload","password"));
-		//ÇĞ»»µ½´òÓ¡Ò³Ãæ
+		//åˆ‡æ¢åˆ°æ‰“å°é¡µé¢
 		comfun.clickitem("xpath", "//*[@id='app']/div/div[1]/nav/ul[1]/li[2]/a");
-		//È¡ÏûÉÏ´«¿Ø¼şµÄÒş²ØÊôĞÔ
+		//å–æ¶ˆä¸Šä¼ æ§ä»¶çš„éšè—å±æ€§
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
-		//ÉÏ´«ÎÄ¼ş
+		//ä¸Šä¼ æ–‡ä»¶ã€éšè—ä¸Šä¼ æ§ä»¶
 		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "filepath"));
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
 		Thread.sleep(8000);
-		//½áËã
+		//ç»“ç®—
 		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[4]/button");
-		//ÏÂµ¥
+		//ä¸‹å•
 		comfun.clickitem("classname", "button-submit");
 		Thread.sleep(8000);
-		//ÑéÖ¤Ö§¸¶±¦Ö§¸¶Ò³Ãæ
-		comfun.checkequal(comfun.gettext("classname", "logo-title"), "ÎÒµÄÊÕÒøÌ¨");
+		//éªŒè¯æ”¯ä»˜ï¼ˆæ”¯ä»˜å®æ”¯ä»˜é¡µé¢ï¼‰
+		comfun.checkequal(comfun.gettext("classname", "logo-title"), "æˆ‘çš„æ”¶é“¶å°");
 		
     }
 
