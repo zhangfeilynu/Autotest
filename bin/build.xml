@@ -2,7 +2,7 @@
 <project name="TestNGDemo" default="run" basedir=".">
     <echo  message="import libs" />
     <path id="run.classpath">
-        <fileset dir="${basedir}">
+        <fileset dir=".">
             <include name="lib/testng.jar" />
             <include name="lib/selenium-java-2.52.0.jar" />
             <include name="lib/selenium-java-2.52.0-srcs.jar" />
