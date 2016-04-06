@@ -46,7 +46,7 @@ public class Order extends DataProvide {
 		comfun.clickitem("classname", "button-submit");
 		Thread.sleep(8000);
 		//验证支付（支付宝支付页面）
-		comfun.checkequal(comfun.gettext("classname", "logo-title"), "我的收银台1");
+		comfun.checkequal(comfun.gettext("classname", "logo-title"), "我的收银台");
 		
     }
 
