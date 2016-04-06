@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="TestNGDemo" default="run" basedir=".">
+    <echo  message="import libs" />
+    <path id="run.classpath">
+        <fileset dir="${basedir}/src/lib">
+            <include name="testng.jar" />
+            <include name="selenium-java-2.52.0.jar" />
+            <include name="selenium-java-2.52.0-srcs.jar" />
+            <include name="selenium-server-standalone-2.52.0.jar" />
+        	<include name="*.jar" />
+        </fileset>
+    </path>
+    <taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+    <target name="compile" depends="clean">
+        <echo message="mkdir"/>
+        <mkdir dir="build/classes"/>
+        <javac srcdir="." destdir="build/classes" debug="on" encoding="UTF-8">
+            <classpath refid="run.classpath"/>
+        </javac>
+    </target>
+    <path id="runpath"> 
+         <path refid="run.classpath"/> 
+         <pathelement location="build/classes"/> 
+       </path> 
+    <target name="run" depends="compile">
+        <testng  classpathref="runpath"  outputDir="test-output">
+            <xmlfileset dir="${basedir}" includes="testng.xml"/>
+            <jvmarg value="-ea" />
+        </testng>
+    </target>
+
+    <path id="run.classpath">
+	<fileset dir="${basedir}/src/lib" includes="*.jar"/>
+	</path>
+	    <target name="testcase">
+		      <xslt processor="SaxonLiaison" classpathref="run.classpath" out="test-output/index.html" style="test-output/testng-results.xsl" in="${basedir}/test-output/testng-results.xml">
+		      <param name="testNgXslt.outputDir" expression="${basedir}/test-output/"/>
+		      <param name="testNgXslt.sortTestCaseLinks" expression="true"/>
+		      <param name="testNgXslt.testDetailsFilter" expression="FAIL,SKIP,PASS"/>
+		   </xslt>
+		</target>
+</project>
