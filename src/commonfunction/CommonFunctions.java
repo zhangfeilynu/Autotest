@@ -189,6 +189,7 @@ public class CommonFunctions {
 	* @throws Exception
 	*/
 	public void login(String name,String psd) throws Exception{
+		
 		this.inputvalue("css", "div>input[type='text']", name);
 		this.inputvalue("css", "div>input[type='password']", psd);
 		this.clickitem("classname", "button-block");

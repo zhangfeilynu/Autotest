@@ -9,10 +9,10 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*选择宿舍*/
+/*选择打印店*/
 
 
-public class Room extends DataProvide {
+public class PrintShop extends DataProvide {
 	
 	public CommonFunctions comfun;
 	public DataReader dr;
@@ -23,26 +23,26 @@ public class Room extends DataProvide {
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
 		//设置数据源
-		init("src/testdata/Room.xml");
+		init("src/testdata/PrintShop.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
-    public void testroom(Document params) throws Exception {
+    public void testprint(Document params) throws Exception {
     	//登录
     	comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	comfun.login(dr.readnodevalue(params,"login","username"), dr.readnodevalue(params,"login","password"));
-    	//选择学校、宿舍
+    	//选择学校、打印店
     	Thread.sleep(3000);
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[1]/div/div/a");
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"room","ctiy"));
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","ctiy"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"room","school"));
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","school"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"room","dormitory"));
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","dormitory"));
     	Thread.sleep(3000);
-    	comfun.checkequal(comfun.gettext("xpath",".//*[@id='app']/div/div[1]/div/div/a"),dr.readnodevalue(params,"room","checkpoint1"));
+    	comfun.checkequal(comfun.gettext("xpath",".//*[@id='app']/div/div[1]/div/div/a"),dr.readnodevalue(params,"print","checkpoint1"));
     	
     	
     }
