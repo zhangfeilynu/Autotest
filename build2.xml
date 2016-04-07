@@ -37,9 +37,9 @@
 	</path>
 	    <target name="testcase">
 		      <xslt processor="SaxonLiaison" classpathref="run.classpath" out="test-output/index.html" style="test-output/testng-results.xsl" in="${basedir}/test-output/testng-results.xml">
-		      <param name="testNgXslt.outputDir" expression="${basedir}/test-output/"/>
-		      <param name="testNgXslt.sortTestCaseLinks" expression="true"/>
-		      <param name="testNgXslt.testDetailsFilter" expression="FAIL,SKIP,PASS"/>
-		   </xslt>
+		        <param name="testNgXslt.outputDir" expression="${basedir}/test-output/"/>
+		        <param name="testNgXslt.sortTestCaseLinks" expression="true"/>
+		        <param name="testNgXslt.testDetailsFilter" expression="FAIL,SKIP,PASS"/>
+		      </xslt>
 		</target>
 </project>
