@@ -16,9 +16,14 @@
       <class name="testcases.Order"/>
     </classes>
   </test> <!-- Order--> 
-  <test name="Room">
+  <test name="PrintShop">
     <classes>
-      <class name="testcases.Room"/>
+      <class name="testcases.PrintShop"/>
     </classes>
-  </test> <!--Room-->  
+  </test> <!--PrintShop-->
+  <test name="ModifyData">
+    <classes>
+      <class name="testcases.ModifyData"/>
+    </classes>
+  </test> <!--ModifyData-->
 </suite> <!-- Suite -->
