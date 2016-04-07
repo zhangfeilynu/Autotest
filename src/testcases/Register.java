@@ -27,7 +27,7 @@ public class Register extends DataProvide {
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
-    public void reg(Document params) throws Exception {
+    public void testreg(Document params) throws Exception {
     	//输入用户名
     	comfun.inputvalue("name","nickName",dr.readnodevalue(params,"reg","nickName"));
     	//随机产生手机号

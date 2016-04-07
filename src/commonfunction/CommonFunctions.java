@@ -52,7 +52,7 @@ public class CommonFunctions {
 	
 	/**
 	* 获取页面标签
-	* @param type 元素定位类型，如：Xpath,css,name等
+	* @param type 元素定位类型，如：xpath,css,name等
 	* @param location 元素位置
 	* @return 返回获取到的页面元素的文本
 	*/
@@ -88,7 +88,7 @@ public class CommonFunctions {
 	
 	/**
 	* 单击某个元素
-	* @param type 元素定位类型，如：Xpath,css,name等
+	* @param type 元素定位类型，如：xpath,css,name等
 	* @param location 元素位置
 	*/
 	public void clickitem(String type,String location){
@@ -123,7 +123,7 @@ public class CommonFunctions {
 	
 	/**
 	* 清除文本框中的内容
-	* @param type 元素定位类型，如：Xpath,css,name等
+	* @param type 元素定位类型，如：xpath,css,name等
 	* @param location 元素位置
 	*/
 	public void clearvalue(String type,String location){
@@ -140,7 +140,7 @@ public class CommonFunctions {
 	
 	/**
 	* 向文本框中输入文字
-	* @param type 元素定位类型，如：Xpath,css,name等
+	* @param type 元素定位类型，如：xpath,css,name等
 	* @param location 元素位置
 	* @param text 要输入的内容
 	*/

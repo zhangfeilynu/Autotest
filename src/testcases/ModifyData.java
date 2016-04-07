@@ -27,7 +27,7 @@ public class ModifyData extends DataProvide {
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
-    public void modify(Document params) throws Exception {
+    public void testmodify(Document params) throws Exception {
     	//登录
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
     	Thread.sleep(3000);
