@@ -26,39 +26,19 @@
       <class name="testcases.ModifyData"/>
     </classes>
   </test> <!-- ModifyData -->
-  <test name="Order(failed)">
+  <test name="DupRegister">
     <classes>
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="testorder" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- testcases.Order -->
+      <class name="testcases.DupRegister"/>
     </classes>
-  </test> <!-- Order(failed) -->
+  </test> <!-- DupRegister -->
+  <test name="LoginFail">
+    <classes>
+      <class name="testcases.LoginFail"/>
+    </classes>
+  </test> <!-- LoginFail -->
+  <test name="ResetPwd">
+    <classes>
+      <class name="testcases.ResetPwd"/>
+    </classes>
+  </test> <!-- ResetPwd -->
 </suite> <!-- Failed suite [Suite] -->

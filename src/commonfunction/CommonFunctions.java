@@ -177,8 +177,8 @@ public class CommonFunctions {
 	
 	/**
 	* 判断str1和str2是否相等
-	* @param str1 源字符串
-	* @param str2 目标字符串
+	* @param str1 期望值
+	* @param str2 实际值
 	*/
 	public void checkequal(String str1,String str2){
 		assertEquals(str1,str2);

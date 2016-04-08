@@ -41,8 +41,9 @@ public class PrintShop extends DataProvide {
     	comfun.clickitem("xpath",dr.readnodevalue(params,"print","school"));
     	Thread.sleep(1000);
     	comfun.clickitem("xpath",dr.readnodevalue(params,"print","dormitory"));
+    	//验证楼栋
     	Thread.sleep(3000);
-    	comfun.checkequal(comfun.gettext("xpath",".//*[@id='app']/div/div[1]/div/div/a"),dr.readnodevalue(params,"print","checkpoint1"));
+    	comfun.checkequal(dr.readnodevalue(params,"print","checkpoint1"),comfun.gettext("xpath",".//*[@id='app']/div/div[1]/div/div/a"));
     	
     	
     }

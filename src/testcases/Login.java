@@ -31,7 +31,7 @@ public class Login extends DataProvide{
       comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
       Thread.sleep(3000);
       comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
-      comfun.checkequal(comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint1")), dr.readnodevalue(params, "login", "value1"));
+      comfun.checkequal(dr.readnodevalue(params, "login", "value1"),comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint1")));
    }
   
   @AfterTest

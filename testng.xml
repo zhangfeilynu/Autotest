@@ -26,4 +26,19 @@
       <class name="testcases.ModifyData"/>
     </classes>
   </test> <!--ModifyData-->
+  <test name="DupRegister">
+    <classes>
+      <class name="testcases.DupRegister"/>
+    </classes>
+  </test> <!--DupRegister-->
+  <test name="LoginFail">
+    <classes>
+      <class name="testcases.LoginFail"/>
+    </classes>
+  </test> <!--LoginFail-->
+  <test name="ResetPwd">
+    <classes>
+      <class name="testcases.ResetPwd"/>
+    </classes>
+  </test> <!--ResetPwd-->
 </suite> <!-- Suite -->

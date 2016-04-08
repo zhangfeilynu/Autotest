@@ -89,7 +89,7 @@ public class ModifyData extends DataProvide {
     	Thread.sleep(1000);
     	//验证修改
     	//comfun.doesWebElementExist(By.xpath("html/body/div[2]/div/span/div/div/div/span"));
-    	comfun.checkequal(comfun.gettext("xpath","html/body/div[2]/div/span/div/div/div/span"),"提交成功");
+    	comfun.checkequal("提交成功",comfun.gettext("xpath","html/body/div[2]/div/span/div/div/div/span"));
     	
     	
     }

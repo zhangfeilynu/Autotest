@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+<reg name="重复注册">
+    <nickName>DupRegister</nickName>
+    <cellphone>13988880000</cellphone>
+    <password>123456</password>
+    <imgVerifyCode>asdf</imgVerifyCode>
+</reg>
+</testdata>

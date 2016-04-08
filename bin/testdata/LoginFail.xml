@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+<loginfail name="错误的账户或密码 ">
+    <username>13988880000</username>
+    <password>1234567</password>
+</loginfail>
+</testdata>
