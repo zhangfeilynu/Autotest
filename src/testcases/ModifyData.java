@@ -80,7 +80,8 @@ public class ModifyData extends DataProvide {
     	comfun.inputvalue("xpath",".//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[3]/div[2]/div/div/textarea",dr.readnodevalue(params,"modify","info"));
     	//保存
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/input");
-    	Thread.sleep(8000);
+    	Thread.sleep(1000);
+    	
     	
     }
 

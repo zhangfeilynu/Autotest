@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15636" started-at="2016-04-07T10:45:59Z" finished-at="2016-04-07T10:46:15Z">
+  <suite name="Default suite" duration-ms="28284" started-at="2016-04-08T03:06:03Z" finished-at="2016-04-08T03:06:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15636" started-at="2016-04-07T10:45:59Z" finished-at="2016-04-07T10:46:15Z">
-      <class name="testcases.Register">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register@1b3d1929]" name="beforeClass" is-config="true" duration-ms="9773" started-at="2016-04-07T18:45:59Z" finished-at="2016-04-07T18:46:09Z">
+    <test name="Default test" duration-ms="28284" started-at="2016-04-08T03:06:03Z" finished-at="2016-04-08T03:06:32Z">
+      <class name="testcases.PrintShop">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.PrintShop@2b42b123]" name="beforeClass" is-config="true" duration-ms="9798" started-at="2016-04-08T11:06:03Z" finished-at="2016-04-08T11:06:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testreg(org.w3c.dom.Document)[pri:0, instance:testcases.Register@1b3d1929]" name="testreg" duration-ms="4455" started-at="2016-04-07T18:46:09Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-07T18:46:13Z">
+        <test-method status="PASS" signature="testprint(org.w3c.dom.Document)[pri:0, instance:testcases.PrintShop@2b42b123]" name="testprint" duration-ms="16868" started-at="2016-04-08T11:06:13Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-08T11:06:30Z">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testreg -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Register@1b3d1929]" name="afterClass" is-config="true" duration-ms="1390" started-at="2016-04-07T18:46:13Z" finished-at="2016-04-07T18:46:15Z">
+        </test-method> <!-- testprint -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.PrintShop@2b42b123]" name="afterClass" is-config="true" duration-ms="1598" started-at="2016-04-08T11:06:30Z" finished-at="2016-04-08T11:06:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testcases.Register -->
+      </class> <!-- testcases.PrintShop -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

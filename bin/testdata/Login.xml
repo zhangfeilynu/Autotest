@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testdata>
 <login name="登录相关测试数据">
-    <username>15261672979</username>
-    <password>123</password>
+    <username>13988880000</username>
+    <password>123456</password>
     <checkpoint1>.//*[@id='app']/div/div[1]/nav/ul[2]/li/a</checkpoint1>
-    <value1>随米用户_7720</value1>
+    <value1>login</value1>
 </login>
 </testdata>
