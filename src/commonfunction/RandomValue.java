@@ -1,7 +1,7 @@
 package commonfunction;
 
 public class RandomValue {
-	public static String[] telFirst="130,131,132,134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(","); 
+	public static String[] telFirst="130,131,132,133,134,135,136,137,138,139,147,150,151,152,153,154,155,156,157,158,159,189".split(","); 
 	
 	public RandomValue(){
 		
