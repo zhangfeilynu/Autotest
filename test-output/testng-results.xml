@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28284" started-at="2016-04-08T03:06:03Z" finished-at="2016-04-08T03:06:32Z">
+  <suite name="Default suite" duration-ms="43923" started-at="2016-04-08T05:31:04Z" finished-at="2016-04-08T05:31:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28284" started-at="2016-04-08T03:06:03Z" finished-at="2016-04-08T03:06:32Z">
-      <class name="testcases.PrintShop">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.PrintShop@2b42b123]" name="beforeClass" is-config="true" duration-ms="9798" started-at="2016-04-08T11:06:03Z" finished-at="2016-04-08T11:06:13Z">
+    <test name="Default test" duration-ms="43923" started-at="2016-04-08T05:31:04Z" finished-at="2016-04-08T05:31:48Z">
+      <class name="testcases.ModifyData">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.ModifyData@69f34dad]" name="beforeClass" is-config="true" duration-ms="9201" started-at="2016-04-08T13:31:04Z" finished-at="2016-04-08T13:31:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testprint(org.w3c.dom.Document)[pri:0, instance:testcases.PrintShop@2b42b123]" name="testprint" duration-ms="16868" started-at="2016-04-08T11:06:13Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-08T11:06:30Z">
+        <test-method status="PASS" signature="testmodify(org.w3c.dom.Document)[pri:0, instance:testcases.ModifyData@69f34dad]" name="testmodify" duration-ms="32777" started-at="2016-04-08T13:31:13Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-08T13:31:46Z">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testprint -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.PrintShop@2b42b123]" name="afterClass" is-config="true" duration-ms="1598" started-at="2016-04-08T11:06:30Z" finished-at="2016-04-08T11:06:32Z">
+        </test-method> <!-- testmodify -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.ModifyData@69f34dad]" name="afterClass" is-config="true" duration-ms="1924" started-at="2016-04-08T13:31:46Z" finished-at="2016-04-08T13:31:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testcases.PrintShop -->
+      </class> <!-- testcases.ModifyData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

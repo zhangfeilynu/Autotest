@@ -16,9 +16,49 @@
       <class name="testcases.Order"/>
     </classes>
   </test> <!-- Order -->
-  <test name="Room">
+  <test name="PrintShop">
     <classes>
-      <class name="testcases.Room"/>
+      <class name="testcases.PrintShop"/>
     </classes>
-  </test> <!-- Room -->
+  </test> <!-- PrintShop -->
+  <test name="ModifyData">
+    <classes>
+      <class name="testcases.ModifyData"/>
+    </classes>
+  </test> <!-- ModifyData -->
+  <test name="Order(failed)">
+    <classes>
+      <class name="testcases.Login">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.Login -->
+      <class name="testcases.Register">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testcases.Register -->
+      <class name="testcases.PrintShop">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- testcases.PrintShop -->
+      <class name="testcases.ModifyData">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testcases.ModifyData -->
+      <class name="testcases.Order">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="testorder" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.Order -->
+    </classes>
+  </test> <!-- Order(failed) -->
 </suite> <!-- Failed suite [Suite] -->

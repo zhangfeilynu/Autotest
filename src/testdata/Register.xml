@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testdata>
 <reg name="注册">
-    <nickName>autotest</nickName>
+    <nickName>Register</nickName>
     <password>123456</password>
     <imgVerifyCode>asdf</imgVerifyCode>
     <verificationCode>123456</verificationCode>

@@ -5,8 +5,9 @@
     <password>123456</password>
 </login>
 <modify name="修改个人资料">
+	<photo>F:\\testfiles\\P5123512.JPG</photo>
     <cname>测试用户</cname>
-    <uname>testuser</uname>
+    <uname>ModifyData</uname>
     <email>test@sui.me</email>
     <school>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[7]/span</school>
     <year>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[2]/div/div[2]/div[3]/span</year>

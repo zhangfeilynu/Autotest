@@ -1,6 +1,8 @@
 package commonfunction;
 //import java.util.HashSet;
 //import java.util.Set;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
@@ -181,6 +183,24 @@ public class CommonFunctions {
 	public void checkequal(String str1,String str2){
 		assertEquals(str1,str2);
 	}
+	
+	/**
+	 * 判断元素是否存在
+	 * @param selector
+	 * @return
+	 */
+	
+	public boolean doesWebElementExist(By selector) { 
+        try { 
+              driver.findElement(selector); 
+              return true; 
+        } catch (NoSuchElementException e) { 
+              return false; 
+        } 
+    }
+	
+	
+	
 	
 	/**
 	* 登录操作
