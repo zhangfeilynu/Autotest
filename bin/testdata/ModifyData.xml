@@ -9,13 +9,14 @@
     <cname>测试用户</cname>
     <uname>ModifyData</uname>
     <email>test@sui.me</email>
-    <school>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[7]/span</school>
+    <school>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[2]/span</school>
     <year>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[2]/div/div[2]/div[3]/span</year>
-    <address>1号宿舍楼</address>
+    <floor>test</floor>
+    <address>西校区男1宿舍楼</address>
     <room>610</room>
-    <major>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[5]/div[1]/div/div[2]/div[2]/span</major>
-    <major2>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[5]/div[2]/div/div[2]/div[3]/span</major2>
-    <major3>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[5]/div[3]/div/div[2]/div[3]/span</major3>
+    <major>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[6]/div[1]/div/div[2]/div[2]/span</major>
+    <major2>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[6]/div[2]/div/div[2]/div[3]/span</major2>
+    <major3>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[6]/div[3]/div/div[2]/div[3]/span</major3>
     <qq>121404901</qq>
     <sex>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[3]/div[1]/div[2]/div/div[2]/div[1]/span</sex>
     <info>自动化测试用户</info>

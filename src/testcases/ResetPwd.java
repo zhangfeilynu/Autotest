@@ -8,7 +8,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
-/*重置密码*/
+/*登录页面，重置密码*/
 
 public class ResetPwd extends DataProvide{
      public CommonFunctions comfun;

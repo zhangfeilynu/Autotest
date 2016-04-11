@@ -34,7 +34,7 @@ public class Register extends DataProvide {
         comfun.inputvalue("name","nickName",dr.readnodevalue(params,"reg","nickName"));
     	//随机产生手机号
     	comfun.inputvalue("name","cellphone",RandomValue.getTel());
-        //comfun.inputvalue("name","cellphone","13988880004");
+        //comfun.inputvalue("name","cellphone","13988880006");
         //输入密码
         comfun.inputvalue("name","password",dr.readnodevalue(params,"reg","password"));
         //输入图形验证码

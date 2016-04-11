@@ -3,6 +3,10 @@
 <upload name="上传文档数据">
     <username>13988880001</username>
     <password>123456</password>
-    <filepath>F:\\testfiles\\Linux_tail.doc</filepath>
+    <doc>F:\\testfiles\\测试文件1.doc</doc>
+    <docx>F:\\testfiles\\测试文件2.docx</docx>
+    <ppt>F:\\testfiles\\测试文件3.ppt</ppt>
+    <pptx>F:\\testfiles\\测试文件4.pptx</pptx>
+    <pdf>F:\\testfiles\\测试文件5.pdf</pdf>
 </upload>
 </testdata>

@@ -41,4 +41,9 @@
       <class name="testcases.ResetPwd"/>
     </classes>
   </test> <!-- ResetPwd -->
+  <test name="ModifyPwd">
+    <classes>
+      <class name="testcases.ModifyPwd"/>
+    </classes>
+  </test> <!-- ModifyPwd -->
 </suite> <!-- Failed suite [Suite] -->
