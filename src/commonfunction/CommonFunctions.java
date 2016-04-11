@@ -1,8 +1,8 @@
 package commonfunction;
 //import java.util.HashSet;
 //import java.util.Set;
-import java.util.NoSuchElementException;
 
+import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +11,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.*;
+
+//截图jar包
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
 
 
 public class CommonFunctions {
@@ -217,6 +225,34 @@ public class CommonFunctions {
 		
 	}
 	
-		
+	/**
+	 * 截图
+	 * @param drivername
+	 * @param filename
+	 */
+	public static void snapshot(TakesScreenshot drivername, String filename)
+	  {
+	           
+	    String currentPath = System.getProperty("user.dir"); //get current work folder
+	    System.out.println(currentPath);
+	    File scrFile = drivername.getScreenshotAs(OutputType.FILE);
+	        // Now you can do whatever you need to do with it, for example copy somewhere
+	        try {
+	            System.out.println("截图目录是:"+currentPath+"\\"+filename);
+	            FileUtils.copyFile(scrFile, new File(currentPath+"\\"+filename));
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            System.out.println(" 截图失败！");
+	            e.printStackTrace();
+	        } 
+	        finally
+	        {
+	           
+	            System.out.println("screen shot finished");
+	        }
+	  }
+	
+	
+	
 
 }

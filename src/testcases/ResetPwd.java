@@ -1,6 +1,7 @@
 package testcases;
 
 import org.w3c.dom.*;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -46,6 +47,7 @@ public class ResetPwd extends DataProvide{
   
   @AfterTest
   public void teardown() {
+	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"ResetPwd.png");
       comfun.teardown();
   }
 }

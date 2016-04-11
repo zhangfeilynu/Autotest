@@ -1,6 +1,7 @@
 package testcases;
 
 
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -56,6 +57,7 @@ public class Register extends DataProvide {
 
     @AfterClass
     public void afterClass() throws Exception {
+    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"Register.png");
     	comfun.teardown();
     }
 

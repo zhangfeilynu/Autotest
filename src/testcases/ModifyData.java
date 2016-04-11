@@ -2,6 +2,7 @@ package testcases;
 
 //import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -101,6 +102,7 @@ public class ModifyData extends DataProvide {
 
     @AfterClass
     public void afterClass() throws Exception {
+    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"ModifyData.png");
     	comfun.teardown();
     }
 
