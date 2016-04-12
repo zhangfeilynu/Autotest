@@ -15,32 +15,32 @@ public class Login extends DataProvide{
      public CommonFunctions comfun;
      public DataReader dr;
   
-  @BeforeTest
-  public void setup() throws Exception{
-      String url = "http://test2.sui.me/";
-      comfun=new CommonFunctions(url);
-      dr=new DataReader();
-      //设置数据源
-      init("src/testdata/Login.xml");
-  }
+     @BeforeTest
+     public void setup() throws Exception{
+        String url = "http://test2.sui.me/";
+        comfun=new CommonFunctions(url);
+        dr=new DataReader();
+        //设置数据源
+        init("src/testdata/Login.xml");
+     }
   
-  @Test(dataProvider="Test_xml_dataprovider") 
-  public void testlogin(Document params) throws Exception {
-      /**
-       * 登录，并检测登录（用户名）
-       */
+    @Test(dataProvider="Test_xml_dataprovider") 
+    public void testlogin(Document params) throws Exception {
+       /**
+        * 登录，并检测登录（用户名）
+        */
 	  
-	  comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
-      comfun.checkequal(dr.readnodevalue(params, "login", "value1"),comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint1")));
+	   comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
+       comfun.checkequal(dr.readnodevalue(params, "login", "value1"),comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint1")));
    
-  }
+    }
   
-  @AfterTest
-  public void teardown() {
-	  /**
-	   * 截图、退出浏览器
-	   */
-	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"Login.png");
-      comfun.teardown();
+    @AfterTest
+    public void teardown() {
+	   /**
+	    * 截图、退出浏览器
+	    */
+	    CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"Login.png");
+        comfun.teardown();
   }
 }
