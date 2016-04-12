@@ -30,7 +30,7 @@ public class ModifyData extends DataProvide {
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
-    public void testmodify(Document params) throws Exception {
+    public void testmodifydata(Document params) throws Exception {
     	//登录
     	comfun.login(dr.readnodevalue(params,"login","username"),dr.readnodevalue(params,"login","password"));
     	//点击用户名

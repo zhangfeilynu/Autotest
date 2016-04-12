@@ -40,7 +40,7 @@ public class Demo extends DataProvide {
     	/**
   	   * 截图、退出浏览器
   	   */
-  	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"LoginFail.png");
+  	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"Demo.png");
       comfun.teardown();
     }
 
