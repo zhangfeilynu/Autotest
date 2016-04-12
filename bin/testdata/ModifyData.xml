@@ -5,7 +5,7 @@
     <password>123456</password>
 </login>
 <modify name="修改个人资料">
-	<photo>F:\\testfiles\\P5123512.JPG</photo>
+	<photo>F:\\testfiles\\P5123511.JPG</photo>
     <cname>测试用户</cname>
     <uname>ModifyData</uname>
     <email>test@sui.me</email>
