@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53154" started-at="2016-04-12T08:51:25Z" finished-at="2016-04-12T08:52:18Z">
+  <suite name="Default suite" duration-ms="34702" started-at="2016-04-12T09:39:18Z" finished-at="2016-04-12T09:39:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53154" started-at="2016-04-12T08:51:25Z" finished-at="2016-04-12T08:52:18Z">
-      <class name="testcases.ModifyData">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.ModifyData@1777f5b2]" name="beforeClass" is-config="true" duration-ms="9935" started-at="2016-04-12T16:51:25Z" finished-at="2016-04-12T16:51:35Z">
+    <test name="Default test" duration-ms="34702" started-at="2016-04-12T09:39:18Z" finished-at="2016-04-12T09:39:53Z">
+      <class name="testcases.CancelOrder">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.CancelOrder@6ac3205]" name="beforeClass" is-config="true" duration-ms="9241" started-at="2016-04-12T17:39:18Z" finished-at="2016-04-12T17:39:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testmodify(org.w3c.dom.Document)[pri:0, instance:testcases.ModifyData@1777f5b2]" name="testmodify" duration-ms="40142" started-at="2016-04-12T16:51:35Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-12T16:52:15Z">
+        <test-method status="PASS" signature="testcancelpay(org.w3c.dom.Document)[pri:0, instance:testcases.CancelOrder@6ac3205]" name="testcancelpay" duration-ms="21815" started-at="2016-04-12T17:39:27Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-12T17:39:49Z">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testmodify -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.ModifyData@1777f5b2]" name="afterClass" is-config="true" duration-ms="3063" started-at="2016-04-12T16:52:15Z" finished-at="2016-04-12T16:52:18Z">
+        </test-method> <!-- testcancelpay -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.CancelOrder@6ac3205]" name="afterClass" is-config="true" duration-ms="3631" started-at="2016-04-12T17:39:49Z" finished-at="2016-04-12T17:39:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testcases.ModifyData -->
+      </class> <!-- testcases.CancelOrder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
