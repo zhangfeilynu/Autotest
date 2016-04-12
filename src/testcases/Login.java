@@ -26,9 +26,9 @@ public class Login extends DataProvide{
   
   @Test(dataProvider="Test_xml_dataprovider") 
   public void testlogin(Document params) throws Exception {
-   /**
-    * 登录，并检测登录（用户名）
-    */
+      /**
+       * 登录，并检测登录（用户名）
+       */
 	  
 	  comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
       comfun.checkequal(dr.readnodevalue(params, "login", "value1"),comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint1")));
