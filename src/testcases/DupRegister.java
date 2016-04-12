@@ -51,6 +51,9 @@ public class DupRegister extends DataProvide {
 
     @AfterClass
     public void afterClass() throws Exception {
+    	/**
+  	   * 截图、退出浏览器
+  	   */
     	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"DupRegister.png");
     	comfun.teardown();
     }

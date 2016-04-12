@@ -227,8 +227,8 @@ public class CommonFunctions {
 	
 	/**
 	 * 截图
-	 * @param drivername
-	 * @param filename
+	 * @param drivername：驱动
+	 * @param filename：截图名称
 	 */
 	public static void snapshot(TakesScreenshot drivername, String filename)
 	  {
@@ -238,8 +238,8 @@ public class CommonFunctions {
 	    File scrFile = drivername.getScreenshotAs(OutputType.FILE);
 	        // Now you can do whatever you need to do with it, for example copy somewhere
 	        try {
-	            System.out.println("截图目录是:"+currentPath+"\\"+filename);
-	            FileUtils.copyFile(scrFile, new File(currentPath+"\\"+filename));
+	            System.out.println("截图目录是:"+currentPath+"\\src\\images\\"+filename);
+	            FileUtils.copyFile(scrFile, new File(currentPath+"\\src\\images\\"+filename));
 	        } catch (IOException e) {
 	            // TODO Auto-generated catch block
 	            System.out.println(" 截图失败！");

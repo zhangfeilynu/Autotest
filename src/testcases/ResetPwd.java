@@ -47,6 +47,9 @@ public class ResetPwd extends DataProvide{
   
   @AfterTest
   public void teardown() {
+	  /**
+	   * 截图、退出浏览器
+	   */
 	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"ResetPwd.png");
       comfun.teardown();
   }
