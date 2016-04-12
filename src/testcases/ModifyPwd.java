@@ -31,8 +31,6 @@ public class ModifyPwd extends DataProvide {
     public void testmodifypwd(Document params) throws Exception {
     	
     	//登录
-    	comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
-    	Thread.sleep(3000);
     	comfun.login(dr.readnodevalue(params,"login","cellphone"),dr.readnodevalue(params,"login","password"));
     	//切换到安全中心页面
     	comfun.clickitem("xpath",".//*[@id='app']/div/div[1]/nav/ul[2]/li/a");

@@ -30,8 +30,6 @@ public class PrintShop extends DataProvide {
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testprint(Document params) throws Exception {
     	//登录
-    	comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
-    	Thread.sleep(3000);
     	comfun.login(dr.readnodevalue(params,"login","username"), dr.readnodevalue(params,"login","password"));
     	//选择学校、打印店
     	Thread.sleep(3000);

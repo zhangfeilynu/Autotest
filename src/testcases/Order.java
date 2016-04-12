@@ -31,8 +31,6 @@ public class Order extends DataProvide {
 	@Test(dataProvider = "Test_xml_dataprovider")
     public void testorder(Document params)throws Exception {
 		//登录
-		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
-		Thread.sleep(3000);
 		comfun.login(dr.readnodevalue(params,"upload","username"), dr.readnodevalue(params,"upload","password"));
 		//切换到打印页面
 		comfun.clickitem("xpath", "//*[@id='app']/div/div[1]/nav/ul[1]/li[2]/a");
@@ -50,8 +48,8 @@ public class Order extends DataProvide {
 		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[4]/button");
 		//下单
 		comfun.clickitem("classname", "button-submit");
-		Thread.sleep(8000);
 		//验证支付（支付宝支付页面）
+		Thread.sleep(8000);
 		comfun.checkequal("我的收银台",comfun.gettext("classname", "logo-title"));
 		
     }

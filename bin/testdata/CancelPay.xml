@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+<login name="登录">
+    <username>13988880001</username>
+    <password>123456</password>
+</login>
+<pay name="立即支付">
+	<xpath>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div[1]/table/tbody/tr/td[4]/div/span/a[1]</xpath>
+</pay>
+</testdata>

@@ -1,4 +1,4 @@
-1、commonfunction:公用函数
+1、commonfunction:封装基本操作
 2、testcases:测试用例脚本
 3、testdata:测试数据文件配置
 4、images:脚本结束后的截图

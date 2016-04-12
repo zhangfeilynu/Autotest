@@ -29,8 +29,6 @@ public class LoginFail extends DataProvide{
    /**
     *  错误的用户名或者密码登录
     */
-      comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
-      Thread.sleep(3000);
       comfun.login(dr.readnodevalue(params, "loginfail", "username"), dr.readnodevalue(params, "loginfail", "password"));
       comfun.checkequal("用户名或者密码错误。",comfun.gettext("css",".cg-notify-message-template.ng-binding.ng-scope"));
    }

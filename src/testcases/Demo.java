@@ -1,5 +1,6 @@
 package testcases;
 
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -36,7 +37,11 @@ public class Demo extends DataProvide {
 
     @AfterClass
     public void afterClass() throws Exception {
-    	comfun.teardown();
+    	/**
+  	   * 截图、退出浏览器
+  	   */
+  	  CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"LoginFail.png");
+      comfun.teardown();
     }
 
 }

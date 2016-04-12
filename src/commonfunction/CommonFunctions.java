@@ -218,6 +218,8 @@ public class CommonFunctions {
 	*/
 	public void login(String name,String psd) throws Exception{
 		
+		clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");//点击首页的登录按钮
+        Thread.sleep(3000);
 		this.inputvalue("css", "div>input[type='text']", name);
 		this.inputvalue("css", "div>input[type='password']", psd);
 		this.clickitem("classname", "button-block");
