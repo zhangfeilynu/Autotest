@@ -30,20 +30,7 @@ public class DupRegister extends DataProvide {
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testdupreg(Document params) throws Exception {
-    	
-    	/*//输入用户名
-    	comfun.inputvalue("name",dr.readnodevalue(params,"map","nickName"),dr.readnodevalue(params,"reg","nickName"));
-    	//输入已注册的手机号
-    	comfun.inputvalue("name",dr.readnodevalue(params,"map","cellphone"),dr.readnodevalue(params,"reg","cellphone"));
-    	//输入密码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"map","password"),dr.readnodevalue(params,"reg","password"));
-    	//输入图形验证码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"map","imgVerifyCode"),dr.readnodevalue(params,"reg","imgVerifyCode"));
-    	//点击获取按钮
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"map","obtain"));
-    	//提示已注册
-    	comfun.checkequal("该手机号码已注册。",comfun.gettext("css",dr.readnodevalue(params,"map","tips")));*/
-    	
+    	    	    	
     	//输入用户名
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"DupRegister");
     	//输入已注册过的手机号
@@ -56,8 +43,7 @@ public class DupRegister extends DataProvide {
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
     	//提示已注册
     	comfun.checkequal("该手机号码已注册。",comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
-    
-    	
+        	
     }
 
    

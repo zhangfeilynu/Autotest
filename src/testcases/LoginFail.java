@@ -28,14 +28,11 @@ public class LoginFail extends DataProvide{
      @Test(dataProvider="Test_xml_dataprovider") 
      public void testloginfail(Document params) throws Exception {
        
-       /* comfun.login(dr.readnodevalue(params, "loginfail", "username"), dr.readnodevalue(params, "loginfail", "password"));
-        comfun.checkequal("用户名或者密码错误。",comfun.gettext("css",dr.readnodevalue(params,"map","tips")));*/
-    	//登录、密码错误
+        //登录、密码错误
     	comfun.login("13988880000","1234567");
     	//提示用户名或密码错误
     	comfun.checkequal("用户名或者密码错误。",comfun.gettext("css",dr.readnodevalue(params,"LoginPage","tips")));
-    	   	   	
-    	
+     	   	 	
      }
   
      @AfterTest

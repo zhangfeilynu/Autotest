@@ -30,21 +30,7 @@ public class PrintShop extends DataProvide {
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testprint(Document params) throws Exception {
-    	/*//登录
-    	comfun.login(dr.readnodevalue(params,"login","username"), dr.readnodevalue(params,"login","password"));
-    	//选择学校、打印店
-    	Thread.sleep(3000);
-    	comfun.clickitem("xpath",".//*[@id='app']/div/div[1]/div/div/a");
-    	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","ctiy"));
-    	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","school"));
-    	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"print","dormitory"));
-    	//验证楼栋
-    	Thread.sleep(3000);
-    	comfun.checkequal(dr.readnodevalue(params,"print","checkpoint1"),comfun.gettext("xpath",".//*[@id='app']/div/div[1]/div/div/a"));*/
-    	
+    	    	
     	//登录
     	comfun.login("13988880002","123456");
     	//点击学校+楼栋
@@ -61,11 +47,8 @@ public class PrintShop extends DataProvide {
     	Thread.sleep(1000);
     	//验证楼栋
     	comfun.checkequal("上海交通大学 好精神",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
-    	
-    	
+      	
     }
-
-  
   
 
     @AfterClass

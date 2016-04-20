@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testdata>
-<login name="登录相关测试数据">
-    <username>13988880000</username>
-    <password>123456</password>
-    <checkpoint>.//*[@id='app']/div/div[1]/nav/ul[2]/li[2]/a</checkpoint>
-    <value>login</value>
-</login>
-</testdata>

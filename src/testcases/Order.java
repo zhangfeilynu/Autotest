@@ -31,27 +31,6 @@ public class Order extends DataProvide {
 	
 	@Test(dataProvider = "Test_xml_dataprovider")
     public void testorder(Document params)throws Exception {
-		/*//登录
-		comfun.login(dr.readnodevalue(params,"upload","username"), dr.readnodevalue(params,"upload","password"));
-		//切换到打印页面
-		comfun.clickitem("xpath", "//*[@id='app']/div/div[1]/nav/ul[1]/li[2]/a");
-		//取消上传控件的隐藏属性
-		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
-		//上传文件(doc、docx、ppt、pptx、pdf)、隐藏上传控件
-		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "doc"));
-		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "docx"));
-		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "ppt"));
-		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "pptx"));
-		comfun.inputvalue("xpath", ".//*[@id='app']/div/div[2]/div[2]/div[1]/div[1]/div/input", dr.readnodevalue(params, "upload", "pdf"));
-		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
-		Thread.sleep(12000);
-		//结算
-		comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[4]/button");
-		//下单
-		comfun.clickitem("classname", "button-submit");
-		//验证支付（支付宝支付页面）
-		Thread.sleep(8000);
-		comfun.checkequal("我的收银台",comfun.gettext("classname", "logo-title"));*/
 		
 		//登录
 		comfun.login("13988880001","123456");

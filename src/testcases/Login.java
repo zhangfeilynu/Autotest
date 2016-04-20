@@ -30,9 +30,6 @@ public class Login extends DataProvide{
        /**
         * 登录，并检测登录（用户名）
         */
-       //comfun=new CommonFunctions(dr.readnodevalue(params,"map","login"));
-       /*comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
-       comfun.checkequal(dr.readnodevalue(params, "login", "value"),comfun.gettext("xpath", dr.readnodevalue(params, "login", "checkpoint")));*/
        comfun.login("13988880000","123456");
        comfun.checkequal("login",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","personal")));
     }

@@ -31,25 +31,8 @@ public class Register extends DataProvide {
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testreg(Document params) throws Exception {
-    	    	   	
-    	/*//输入用户名
-        comfun.inputvalue("name","nickName",dr.readnodevalue(params,"reg","nickName"));
-    	//随机产生手机号
-    	comfun.inputvalue("name","cellphone",RandomValue.getTel());
-        //comfun.inputvalue("name","cellphone","13988880006");
-        //输入密码
-        comfun.inputvalue("name","password",dr.readnodevalue(params,"reg","password"));
-        //输入图形验证码
-        comfun.inputvalue("name","imgVerifyCode",dr.readnodevalue(params,"reg","imgVerifyCode"));
-        //点击获取按钮，输入短信验证码
-        comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[4]/div/div[2]/div/button");
-        comfun.inputvalue("name","verificationCode",dr.readnodevalue(params,"reg","verificationCode"));
-        //点击免费注册按钮
-        comfun.clickitem("classname","button-block");
-        //验证注册，跳转到打印页面
-    	Thread.sleep(3000);
-    	comfun.checkequal(dr.readnodevalue(params,"reg","checkpoint1"),CommonFunctions.driver.getCurrentUrl());*/
-    	
+    	  	
+    	    	
     	//输入用户名
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
     	//输入随机手机号
@@ -69,8 +52,7 @@ public class Register extends DataProvide {
             	
     }
 
-  
-  
+   
 
     @AfterClass
     public void afterClass() throws Exception {
