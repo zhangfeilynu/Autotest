@@ -21,12 +21,13 @@ public class ResetPwd extends DataProvide{
       comfun=new CommonFunctions(url);
       dr=new DataReader();
       //设置数据源
-      init("src/testdata/ResetPwd.xml");
+      //init("src/testdata/ResetPwd.xml");
+      init("src/testdata/Data.xml");
   }
   
   @Test(dataProvider="Test_xml_dataprovider") 
   public void testresetpwd(Document params) throws Exception {
-      //切换到登录页面
+     /* //切换到登录页面
       comfun.clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");
       Thread.sleep(3000);
       //切换到重置密码页面
@@ -42,7 +43,33 @@ public class ResetPwd extends DataProvide{
       comfun.clickitem("xpath","html/body/div[2]/div/div[2]/div[6]/div/div/div[1]/button");
       //验证
       Thread.sleep(1000);
-      comfun.checkequal("密码重置成功,请登录",comfun.gettext("xpath","html/body/div[4]/div"));
+      comfun.checkequal("密码重置成功,请登录",comfun.gettext("xpath","html/body/div[4]/div"));*/
+	  
+	  //切换到登录页面
+	  comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","login"));
+	  Thread.sleep(3000);
+	  //切换到重置密码页面
+	  comfun.clickitem("xpath",dr.readnodevalue(params,"LoginPage","resetpwd"));
+	  Thread.sleep(3000);
+	  //输入手机号
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","cellphone"),"13988880004");
+	  //输入新密码
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","newpwd"),"123456");
+	  //确认密码
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","conpwd"),"123456");
+	  //输入图形验证码
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","imgVerifyCode"),"asdf");
+	  //点击获取按钮
+	  comfun.clickitem("xpath",dr.readnodevalue(params,"PassportPage","obtain"));
+	  //输入短信验证码
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","verificationCode"),"123456");
+	  //点击重置密码按钮
+	  comfun.clickitem("xpath",dr.readnodevalue(params,"PassportPage","submit"));
+	  //验证（成功提示）
+	  Thread.sleep(1000);
+	  comfun.checkequal("密码重置成功,请登录",comfun.gettext("xpath",dr.readnodevalue(params,"PassportPage","tips")));
+	  
+	  
    }
   
   @AfterTest

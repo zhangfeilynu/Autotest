@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="lib/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/jar/selenium-java-2.52.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar/selenium-java-2.52.0-srcs.jar"/>
-	<classpathentry kind="lib" path="D:/jar/selenium-server-standalone-2.52.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar/httpclient-4.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/jar/httpcore-4.3.jar"/>
-	<classpathentry kind="lib" path="D:/jar/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="src/lib/log4j-api-2.3-sources.jar"/>
+	<classpathentry kind="lib" path="src/lib/log4j-api-2.3.jar"/>
+	<classpathentry kind="lib" path="src/lib/log4j-core-2.3-sources.jar"/>
+	<classpathentry kind="lib" path="src/lib/log4j-core-2.3.jar"/>
+	<classpathentry kind="lib" path="src/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="src/lib/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="src/lib/selenium-java-2.52.0-srcs.jar"/>
+	<classpathentry kind="lib" path="src/lib/selenium-java-2.52.0.jar"/>
+	<classpathentry kind="lib" path="src/lib/selenium-server-standalone-2.52.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

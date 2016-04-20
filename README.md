@@ -6,3 +6,5 @@
 6、build-report.xml报告转换文件（美化报告，适用于Eclipse中，不适用于Jenkins中）
 7、testng.xml测试用例组织文件，记录运行的测试脚本
 8、lib:依赖包
+9、Data.xml对象库
+10、使用Selenium + testng + Ant + Jenkins

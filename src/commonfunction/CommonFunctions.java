@@ -21,7 +21,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 
 
-public class CommonFunctions {
+public class CommonFunctions{
 	/*程序公用函数*/
 	static public WebDriver driver;
 	
@@ -229,8 +229,8 @@ public class CommonFunctions {
 	
 	/**
 	 * 截图
-	 * @param drivername：驱动
-	 * @param filename：截图名称
+	 * @param drivername
+	 * @param filename
 	 */
 	public static void snapshot(TakesScreenshot drivername, String filename)
 	  {

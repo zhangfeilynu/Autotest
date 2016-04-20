@@ -6,4 +6,12 @@
     <password>123456</password>
     <imgVerifyCode>asdf</imgVerifyCode>
 </reg>
+<map name="页面元素">
+    <nickName>nickName</nickName><!-- 用户名name -->
+    <cellphone>cellphone</cellphone><!-- 手机号name -->
+    <password>password</password><!-- 密码name -->
+    <imgVerifyCode>imgVerifyCode</imgVerifyCode><!-- 图形验证码name -->
+    <obtain>.//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[4]/div/div[2]/div/button</obtain><!-- 获取按钮xpath -->
+    <tips>.sui-message-custom-content.sui-message-error>span</tips><!-- 提示css -->
+</map>
 </testdata>

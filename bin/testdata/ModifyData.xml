@@ -6,13 +6,13 @@
 </login>
 <modify name="修改个人资料">
 	<photo>F:\\testfiles\\P5123511.JPG</photo>
-    <cname>测试用户</cname>
-    <uname>ModifyData</uname>
+    <realname>测试用户</realname>
+    <username>ModifyData</username>
     <email>test@sui.me</email>
     <school>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[2]/span</school>
     <year>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[2]/div/div[2]/div[3]/span</year>
-    <floor>test</floor>
-    <address>西校区男1宿舍楼</address>
+    <floor>西校区男1宿舍楼</floor>
+    <address>东方路1号</address>
     <room>610</room>
     <major>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[6]/div[1]/div/div[2]/div[2]/span</major>
     <major2>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[6]/div[2]/div/div[2]/div[3]/span</major2>
@@ -21,4 +21,15 @@
     <sex>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[3]/div[1]/div[2]/div/div[2]/div[1]/span</sex>
     <info>自动化测试用户</info>
 </modify>
+<map name="页面元素">
+    <personal>.//*[@id='app']/div/div[1]/nav/ul[2]/li/a</personal><!-- 用户名xpath -->
+    <modify>.//*[@id='app']/div/div[2]/div[2]/div[1]/div/div[3]/dl/dd[1]/a</modify><!-- "修改个人资料"xpath -->
+    <photo>.avatar-wrap>input</photo><!-- 修改图像按钮css -->
+    <realname>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div/input</realname><!-- 姓名xpath -->
+    <username>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[1]/div[2]/div/input</username><!-- 用户名xpath -->
+    <email>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[2]/div[2]/div/input</email><!-- 邮箱xpath -->
+    <schoollist>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/i</schoollist><!-- 学校下拉箭头xpath -->
+    <school>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[2]/span</school><!-- 学校xpath -->
+    
+</map>
 </testdata>

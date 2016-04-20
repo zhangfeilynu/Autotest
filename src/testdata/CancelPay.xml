@@ -4,7 +4,9 @@
     <username>13988880001</username>
     <password>123456</password>
 </login>
-<pay name="立即支付">
-	<xpath>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div[1]/table/tbody/tr/td[4]/div/span/a[1]</xpath>
-</pay>
+<map name="页面元素">
+    <personal>.//*[@id='app']/div/div[1]/nav/ul[2]/li[2]/a</personal><!-- 用户名xpath -->
+    <notpaid>.//*[@id='app']/div/div[2]/div[2]/div[1]/div/div[2]/dl/dd[2]/a</notpaid><!-- 待支付订单页面xpath -->
+    <paynow>.//*[@id='app']/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div[1]/table/tbody/tr/td[4]/div/span/a[1]</paynow><!-- 第一个立即支付xpath -->
+</map>
 </testdata>

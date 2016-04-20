@@ -25,29 +25,50 @@ public class CancelOrder extends DataProvide {
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
 		//设置数据源
-		init("src/testdata/CancelOrder.xml");
+		//init("src/testdata/CancelOrder.xml");
+		init("src/testdata/Data.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testcancelorder(Document params) throws Exception {
     	
-    	 //登录
+    /*	 //登录
     	 comfun.login(dr.readnodevalue(params, "login", "username"), dr.readnodevalue(params, "login", "password"));
          //点击用户名
-         comfun.clickitem("xpath",".//*[@id='app']/div/div[1]/nav/ul[2]/li/a");
-         Thread.sleep(3000);
+         comfun.clickitem("xpath",dr.readnodevalue(params,"map","personal"));
+    	 Thread.sleep(3000);
          //切换到待支付订单页面
-         comfun.clickitem("xpath",".//*[@id='app']/div/div[2]/div[2]/div[1]/div/div[2]/dl/dd[2]/a");
-         Thread.sleep(3000);
+         comfun.clickitem("xpath",dr.readnodevalue(params,"map","notpaid"));
+    	 Thread.sleep(3000);
          //取消第一个待支付的订单
-         comfun.clickitem("xpath",dr.readnodevalue(params,"cancelorder","xpath"));
+         comfun.clickitem("xpath",dr.readnodevalue(params,"map","cancel"));
          //切换到Alert窗口、确定
          Alert alert = CommonFunctions.driver.switchTo().alert(); 
          Thread.sleep(3000);
          alert.accept();
          //验证
-         comfun.checkequal("取消订单成功!",comfun.gettext("xpath","html/body/div[2]/div/span/div/div/div/span"));
-            	
+         comfun.checkequal("取消订单成功!",comfun.gettext("xpath",dr.readnodevalue(params,"map","tips")));
+            	*/
+    	//登录
+    	comfun.login("13988880001","123456");
+    	//点击用户名
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
+    	Thread.sleep(3000);
+    	//切换到待支付订单页面
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"AccountPage","paid"));
+    	Thread.sleep(3000);
+    	//取消第一个待支付的订单
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"PaidPage","cancel"));
+    	//切换到Alert窗口、确定
+    	Thread.sleep(3000);
+    	Alert alert = CommonFunctions.driver.switchTo().alert(); 
+        alert.accept();
+        //验证（提示取消成功）
+        Thread.sleep(1000);
+        comfun.checkequal("取消订单成功!",comfun.gettext("xpath",dr.readnodevalue(params,"PaidPage","tips")));
+    	
+    	
+    	
     }
 
   

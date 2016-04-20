@@ -4,4 +4,7 @@
     <username>13988880000</username>
     <password>1234567</password>
 </loginfail>
+<map name="页面元素">
+    <tips>.cg-notify-message-template.ng-binding.ng-scope</tips><!-- 提示 css-->
+</map>
 </testdata>

@@ -25,13 +25,14 @@ public class Register extends DataProvide {
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
 		//设置数据源
-		init("src/testdata/Register.xml");
+		//init("src/testdata/Register.xml");
+		init("src/testdata/Data.xml");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testreg(Document params) throws Exception {
     	    	   	
-    	//输入用户名
+    	/*//输入用户名
         comfun.inputvalue("name","nickName",dr.readnodevalue(params,"reg","nickName"));
     	//随机产生手机号
     	comfun.inputvalue("name","cellphone",RandomValue.getTel());
@@ -47,9 +48,25 @@ public class Register extends DataProvide {
         comfun.clickitem("classname","button-block");
         //验证注册，跳转到打印页面
     	Thread.sleep(3000);
-    	comfun.checkequal(dr.readnodevalue(params,"reg","checkpoint1"),CommonFunctions.driver.getCurrentUrl());
-      
+    	comfun.checkequal(dr.readnodevalue(params,"reg","checkpoint1"),CommonFunctions.driver.getCurrentUrl());*/
     	
+    	//输入用户名
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
+    	//输入随机手机号
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),RandomValue.getTel());
+    	//输入密码
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");
+    	//输入图形验证码
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),"asdf");
+    	//点击获取按钮，输入短信验证码
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","verificationCode"),"123456");
+    	//点击免费注册按钮
+    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","submit"));
+    	//验证注册，跳转到打印页面
+    	Thread.sleep(3000);
+    	comfun.checkequal("http://print.test2.sui.me/",CommonFunctions.driver.getCurrentUrl());
+            	
     }
 
   
