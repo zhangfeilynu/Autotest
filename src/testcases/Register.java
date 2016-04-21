@@ -29,7 +29,7 @@ public class Register extends DataProvide {
 		//init("src/testdata/Register.xml");
 		init("src/testdata/Data.xml");
 		//删除上次注册的手机号
-		HttpRequest.sendPost("http://121.43.101.211:8180/suime-user/rest/v2/student/invalid/mobile/14700000000");
+		HttpRequest.sendPost("http://121.43.101.211:8180/suime-user/rest/v2/student/invalid/mobile/13988880008");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
