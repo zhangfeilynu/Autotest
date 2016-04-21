@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47369" started-at="2016-04-20T08:01:20Z" finished-at="2016-04-20T08:02:07Z">
+  <suite name="Default suite" duration-ms="17232" started-at="2016-04-21T10:17:45Z" finished-at="2016-04-21T10:18:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47369" started-at="2016-04-20T08:01:20Z" finished-at="2016-04-20T08:02:07Z">
-      <class name="testcases.ModifyData">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.ModifyData@46176578]" name="beforeClass" is-config="true" duration-ms="9696" started-at="2016-04-20T16:01:20Z" finished-at="2016-04-20T16:01:30Z">
+    <test name="Default test" duration-ms="17232" started-at="2016-04-21T10:17:45Z" finished-at="2016-04-21T10:18:02Z">
+      <class name="testcases.Register">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register@1ac90b69]" name="beforeClass" is-config="true" duration-ms="10367" started-at="2016-04-21T18:17:45Z" finished-at="2016-04-21T18:17:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testmodifydata(org.w3c.dom.Document)[pri:0, instance:testcases.ModifyData@46176578]" name="testmodifydata" duration-ms="34970" started-at="2016-04-20T16:01:30Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-20T16:02:05Z">
+        <test-method status="PASS" signature="testreg(org.w3c.dom.Document)[pri:0, instance:testcases.Register@1ac90b69]" name="testreg" duration-ms="4350" started-at="2016-04-21T18:17:55Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-21T18:17:59Z">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testmodifydata -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.ModifyData@46176578]" name="afterClass" is-config="true" duration-ms="2684" started-at="2016-04-20T16:02:05Z" finished-at="2016-04-20T16:02:07Z">
+        </test-method> <!-- testreg -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.Register@1ac90b69]" name="afterClass" is-config="true" duration-ms="2498" started-at="2016-04-21T18:17:59Z" finished-at="2016-04-21T18:18:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testcases.ModifyData -->
+      </class> <!-- testcases.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -6,59 +6,71 @@
       <class name="testcases.Login"/>
       </classes>
   </test> <!-- Login --> 
+  
   <test name="Register">
     <classes>
       <class name="testcases.Register"/>
     </classes>
   </test> <!-- Register --> 
+  
   <test name="Order">
     <classes>
       <class name="testcases.Order"/>
     </classes>
   </test> <!-- Order--> 
+  
   <test name="PrintShop">
     <classes>
       <class name="testcases.PrintShop"/>
     </classes>
   </test> <!--PrintShop-->
+  
   <test name="ModifyData">
     <classes>
       <class name="testcases.ModifyData"/>
     </classes>
   </test> <!--ModifyData-->
+  
   <test name="DupRegister">
     <classes>
       <class name="testcases.DupRegister"/>
     </classes>
   </test> <!--DupRegister-->
+  
   <test name="ErrRegister">
     <classes>
       <class name="testcases.ErrRegister"/>
     </classes>
   </test> <!--ErrRegister-->
+  
   <test name="LoginFail">
     <classes>
       <class name="testcases.LoginFail"/>
     </classes>
   </test> <!--LoginFail-->
+  
   <test name="ResetPwd">
     <classes>
       <class name="testcases.ResetPwd"/>
     </classes>
+    
   </test> <!--ResetPwd-->
   <test name="ModifyPwd">
     <classes>
       <class name="testcases.ModifyPwd"/>
     </classes>
   </test> <!--ModifyPwd-->
+  
   <test name="Pay">
     <classes>
       <class name="testcases.Pay"/>
     </classes>
   </test> <!--Pay-->
+  
   <test name="CancelPay">
     <classes>
       <class name="testcases.CancelPay"/>
     </classes>
   </test> <!--CancelPay-->
+  
 </suite> <!-- Suite -->

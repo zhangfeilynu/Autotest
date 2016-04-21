@@ -10,7 +10,8 @@ import org.w3c.dom.Document;
 import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
-import commonfunction.RandomValue;
+import commonfunction.HttpRequest;
+//import commonfunction.RandomValue;
 
 //免费注册
 
@@ -27,6 +28,8 @@ public class Register extends DataProvide {
 		//设置数据源
 		//init("src/testdata/Register.xml");
 		init("src/testdata/Data.xml");
+		//删除上次注册的手机号
+		HttpRequest.sendPost("http://121.43.101.211:8180/suime-user/rest/v2/student/invalid/mobile/14700000000");
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
@@ -36,7 +39,8 @@ public class Register extends DataProvide {
     	//输入用户名
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
     	//输入随机手机号
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),RandomValue.getTel());
+    	//comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),RandomValue.getTel());
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),"13988880008");
     	//输入密码
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");
     	//输入图形验证码
