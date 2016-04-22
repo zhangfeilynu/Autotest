@@ -43,11 +43,17 @@
     </classes>
   </test> <!--DupRegister-->
   
-  <test name="ErrRegister">
+  <test name="ErrPRegister">
     <classes>
       <class name="testcases.ErrPRegister"/>
     </classes>
-  </test> <!--ErrRegister-->
+  </test> <!--ErrPRegister-->
+  
+   <test name="ErrMRegister">
+    <classes>
+      <class name="testcases.ErrMRegister"/>
+    </classes>
+  </test> <!--ErrMRegister-->
   
   <test name="LoginFail">
     <classes>
