@@ -1,9 +1,9 @@
 package testcases;
 
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.w3c.dom.Document;
 
 import commonfunction.CommonFunctions;
@@ -18,7 +18,7 @@ public class DupRegister extends DataProvide {
 	public CommonFunctions comfun;
 	public DataReader dr;
 	
-	@BeforeClass
+	@BeforeTest
 	public void beforeClass() throws Exception {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
@@ -42,13 +42,14 @@ public class DupRegister extends DataProvide {
     	//点击获取按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
     	//提示已注册
+    	Thread.sleep(1000);
     	comfun.checkequal("该手机号码已注册。",comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
-        	
+       
     }
 
    
 
-    @AfterClass
+    @AfterTest
     public void afterClass() throws Exception {
     	/**
   	   * 截图、退出浏览器

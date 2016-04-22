@@ -3,9 +3,9 @@ package testcases;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.w3c.dom.Document;
 
 import commonfunction.CommonFunctions;
@@ -20,7 +20,7 @@ public class ModifyData extends DataProvide {
 	public CommonFunctions comfun;
 	public DataReader dr;
 	
-	@BeforeClass
+	@BeforeTest
 	public void beforeClass() throws Exception {
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
@@ -100,7 +100,7 @@ public class ModifyData extends DataProvide {
     }
   
 
-    @AfterClass
+    @AfterTest
     public void afterClass() throws Exception {
     	/**
   	   * 截图、退出浏览器

@@ -2,9 +2,9 @@ package testcases;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.w3c.dom.Document;
 import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
@@ -18,7 +18,7 @@ public class Order extends DataProvide {
 	public DataReader dr;
 	
   
-	@BeforeClass
+	@BeforeTest
 	public void beforeClass() throws Exception {
 		//打开网页
 		String url="http://test2.sui.me/";
@@ -40,16 +40,26 @@ public class Order extends DataProvide {
 		//取消上传控件的隐藏属性
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
 		//上传文件(doc、docx、ppt、pptx、pdf)、隐藏上传控件
-		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件1.doc");
-		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件2.docx");
-		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件3.ppt");
-		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件4.pptx");
 		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件5.pdf");
+		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件4.pptx");
+		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件3.ppt");
+		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件2.docx");
+		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),"F:\\testfiles\\测试文件1.doc");
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
-		Thread.sleep(12000);
+		Thread.sleep(30000);
 		//结算
 		comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
 		Thread.sleep(3000);
+		//修改打印列表中第一个文件页面布局、选择1页2面
+		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","droplayout"));
+		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","layout2"));
+		//选择双面打印
+		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","droppage"));
+		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","twoside"));
+		//添加打印份数
+		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","add"));
+		
+		
 		//确认下单
 		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","submit"));
 		Thread.sleep(8000);
@@ -61,7 +71,7 @@ public class Order extends DataProvide {
  
  
 
-    @AfterClass
+    @AfterTest
     public void afterClass()throws Exception {
     	/**
   	   * 截图、退出浏览器

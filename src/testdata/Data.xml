@@ -15,15 +15,17 @@
         <verificationCode>verificationCode</verificationCode><!-- 短信验证码name -->
         <invitation>source</invitation><!-- 注册邀请码name -->
         <submit>.//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[6]/div/div/div/button</submit><!-- 免费注册按钮 -->
-        <tips>.sui-message-custom-content.sui-message-error>span</tips><!-- 注册失败提示css -->
+        <tips>.sui-message-custom-content.sui-message-error>span</tips><!-- 已注册提示css -->
+        <tips2>div/div/div/span</tips2><!-- 短信验证码错误提示 -->
         <!-- 以下元素是登录之后才有 ，也是在首页-->
-        <schooldorm>.//*[@id='app']/div/div[1]/div/div/a</schooldorm><!-- 页面顶端：学校+宿舍楼栋 -->
-        <school>.//*[@id='app']/div/div[1]/div/div/a/span[1]</school><!-- 页面顶端：学校 -->
-        <dorm>.//*[@id='app']/div/div[1]/div/div/a/span[3]</dorm><!-- 页面顶端：宿舍楼栋 -->
+        <schooldorm>.//*[@id='app']/div/div[1]/div/div</schooldorm><!-- 页面顶端：学校+宿舍楼栋 -->
+        <school>.//*[@id='app']/div/div[1]/div/div/span/span[1]</school><!-- 页面顶端：学校 -->
+        <dorm>.//*[@id='app']/div/div[1]/div/div/span/span[3]</dorm><!-- 页面顶端：宿舍楼栋 -->
         <city>.//*[@id='app']/div/div[1]/div/div[2]/div[2]/div[1]/ul/li[2]/a</city><!-- 城市:上海 -->
         <chooseschool>.//*[@id='app']/div/div[1]/div/div[2]/div[2]/div[3]/ul/li[2]/a</chooseschool><!-- 选择学校：上海交通大学 -->
         <choosedorm>.//*[@id='app']/div/div[1]/div/div[2]/div[3]/div/div[2]/div[1]/ul/li[12]/a</choosedorm><!-- 选择宿舍楼栋 -->
-        <personal>.//*[@id='app']/div/div[1]/nav/ul[2]/li[2]/a</personal><!-- 页面顶端：用户名 -->        
+        <personal>.//*[@id='app']/div/div[1]/nav/ul[2]/li[1]/a</personal><!-- 页面顶端：用户名 -->
+        <quit>.//*[@id='app']/div/div[1]/nav/ul[2]/li[2]/a</quit><!-- 页面顶端：退出按钮 -->        
      </HomePage>
     
     <!-- ............................................... -->
@@ -43,6 +45,16 @@
          <tips>.cg-notify-message-template.ng-binding.ng-scope</tips><!-- 用户名或密码错误提示 css-->
      </LoginPage>
      
+      <!-- ............................................... -->
+      
+      <QQLoginPage name="QQ账号安全登录页面">
+          <switch>switcher_plogin</switch><!-- 账号密码登录id -->
+          <qqusername>u</qqusername><!-- QQ号输入框id -->
+          <qqpwd>p</qqpwd><!-- QQ密码输入框 id -->
+          <qqlogin>login_button</qqlogin><!-- QQ登录按钮id -->
+          
+      </QQLoginPage>
+      
       <!-- ............................................... -->
      
      <RegisterPage name="创建用户">

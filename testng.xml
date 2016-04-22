@@ -19,6 +19,12 @@
     </classes>
   </test> <!-- Order--> 
   
+  <test name="CancelOrder">
+    <classes>
+      <class name="testcases.CancelOrder"/>
+    </classes>
+  </test> <!-- CancelOrder--> 
+  
   <test name="PrintShop">
     <classes>
       <class name="testcases.PrintShop"/>
@@ -39,7 +45,7 @@
   
   <test name="ErrRegister">
     <classes>
-      <class name="testcases.ErrRegister"/>
+      <class name="testcases.ErrPRegister"/>
     </classes>
   </test> <!--ErrRegister-->
   
@@ -53,8 +59,8 @@
     <classes>
       <class name="testcases.ResetPwd"/>
     </classes>
-    
   </test> <!--ResetPwd-->
+  
   <test name="ModifyPwd">
     <classes>
       <class name="testcases.ModifyPwd"/>
