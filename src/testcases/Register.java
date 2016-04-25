@@ -51,8 +51,11 @@ public class Register extends DataProvide {
     	//点击免费注册按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","submit"));
     	//验证注册，跳转到打印页面
-    	Thread.sleep(3000);
-    	comfun.checkequal("http://print.test2.sui.me/",CommonFunctions.driver.getCurrentUrl());
+    	//Thread.sleep(3000);
+    	//comfun.checkequal("http://print.test2.sui.me/",CommonFunctions.driver.getCurrentUrl());
+    	//注册成功提示
+    	Thread.sleep(1000);
+    	comfun.checkequal("注册成功",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","tips2")));
             	
     }
 

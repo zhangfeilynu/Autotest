@@ -16,7 +16,7 @@
         <invitation>source</invitation><!-- 注册邀请码name -->
         <submit>.//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[6]/div/div/div/button</submit><!-- 免费注册按钮 -->
         <tips>.sui-message-custom-content.sui-message-error>span</tips><!-- 已注册提示css -->
-        <tips2>div/div/div/span</tips2><!-- 短信验证码错误提示 -->
+        <tips2>html/body/div[2]/div/span/div/div</tips2><!-- 点击免费注册按钮错误提示 -->
         <!-- 以下元素是登录之后才有 ，也是在首页-->
         <schooldorm>.//*[@id='app']/div/div[1]/div/div</schooldorm><!-- 页面顶端：学校+宿舍楼栋 -->
         <school>.//*[@id='app']/div/div[1]/div/div/span/span[1]</school><!-- 页面顶端：学校 -->

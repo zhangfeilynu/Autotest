@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28480" started-at="2016-04-22T10:33:17Z" finished-at="2016-04-22T10:33:46Z">
+  <suite name="Default suite" duration-ms="20230" started-at="2016-04-25T02:37:14Z" finished-at="2016-04-25T02:37:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28480" started-at="2016-04-22T10:33:17Z" finished-at="2016-04-22T10:33:46Z">
-      <class name="testcases.CancelPay">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.CancelPay@1ac90b69]" name="beforeClass" is-config="true" duration-ms="4305" started-at="2016-04-22T18:33:17Z" finished-at="2016-04-22T18:33:22Z">
+    <test name="Default test" duration-ms="20230" started-at="2016-04-25T02:37:14Z" finished-at="2016-04-25T02:37:35Z">
+      <class name="testcases.ResetPwd">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.ResetPwd@61257dba]" name="setup" is-config="true" duration-ms="10109" started-at="2016-04-25T10:37:14Z" finished-at="2016-04-25T10:37:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testcancelpay(org.w3c.dom.Document)[pri:0, instance:testcases.CancelPay@1ac90b69]" name="testcancelpay" duration-ms="22089" started-at="2016-04-22T18:33:22Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-22T18:33:44Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testresetpwd(org.w3c.dom.Document)[pri:0, instance:testcases.ResetPwd@61257dba]" name="testresetpwd" duration-ms="8520" started-at="2016-04-25T10:37:24Z" data-provider="Test_xml_dataprovider" finished-at="2016-04-25T10:37:33Z">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcancelpay -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.CancelPay@1ac90b69]" name="afterClass" is-config="true" duration-ms="2064" started-at="2016-04-22T18:33:44Z" finished-at="2016-04-22T18:33:46Z">
+        </test-method> <!-- testresetpwd -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.ResetPwd@61257dba]" name="teardown" is-config="true" duration-ms="1573" started-at="2016-04-25T10:37:33Z" finished-at="2016-04-25T10:37:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- testcases.CancelPay -->
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.ResetPwd -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

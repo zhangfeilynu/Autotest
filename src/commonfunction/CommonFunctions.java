@@ -32,11 +32,11 @@ public class CommonFunctions{
 	
 	public CommonFunctions(String url){
 		//创建Firefox浏览器实例
-		//driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
 		//driver= new ChromeDriver();
-		System.setProperty("webdriver.ie.driver", "D:\\work\\selenium\\tools\\IEDriverServer.exe");
-		driver = new InternetExplorerDriver();
+		//System.setProperty("webdriver.ie.driver", "D:\\work\\selenium\\tools\\IEDriverServer.exe");
+		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
 		
