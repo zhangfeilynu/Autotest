@@ -33,7 +33,7 @@ public class ErrPRegister extends DataProvide {
     	    	  	
     	//输入用户名
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
-    	//输入已注册过的手机号
+    	//输入手机号
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),"13988880000");
     	//输入密码
     	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");

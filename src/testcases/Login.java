@@ -9,6 +9,7 @@ import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
 
+
 /*登录*/
 
 public class Login extends DataProvide{
@@ -30,8 +31,9 @@ public class Login extends DataProvide{
        /**
         * 登录，并检测登录（用户名）
         */
-       comfun.login("13988880000","123456");
-       comfun.checkequal("login",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","personal")));
+       comfun.login(dr.readnodevalue(params,"Login","cellphone"),dr.readnodevalue(params,"Login","password"));
+       comfun.checkequal(dr.readnodevalue(params,"Login","checkpoint"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","personal")));
+       
     }
   
     @AfterTest
