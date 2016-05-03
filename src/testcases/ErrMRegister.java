@@ -32,22 +32,22 @@ public class ErrMRegister extends DataProvide {
     public void testerrmreg(Document params) throws Exception {
     	    	  	
     	//输入用户名
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),dr.readnodevalue(params,"ErrMRegister","username"));
     	//输入已注册过的手机号
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),"14722112211");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),dr.readnodevalue(params,"ErrMRegister","cellphone"));
     	//输入密码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),dr.readnodevalue(params,"ErrMRegister","password"));
     	//输入图形验证码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),"asdf");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),dr.readnodevalue(params,"ErrMRegister","imgVerifyCode"));
     	//点击获取按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
     	//输入错误的短信验证码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","verificationCode"),"654321");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","verificationCode"),dr.readnodevalue(params,"ErrMRegister","verificationCode"));
     	//点击免费注册按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","submit"));
     	//提示短信验证码错误
     	Thread.sleep(1000);
-    	comfun.checkequal("短信验证码错误",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","tips2")));
+    	comfun.checkequal(dr.readnodevalue(params,"ErrMRegister","tips"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","tips2")));
   
     }
 

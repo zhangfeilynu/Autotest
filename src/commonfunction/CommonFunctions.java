@@ -3,16 +3,20 @@ package commonfunction;
 //import java.util.Set;
 
 import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.*;
 
-//截图jar包
+
 import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
@@ -22,7 +26,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 
 public class CommonFunctions{
-	/*程序公用函数*/
+	
 	static public WebDriver driver;
 	
 	/*构造函数*/
@@ -32,12 +36,13 @@ public class CommonFunctions{
 	
 	public CommonFunctions(String url){
 		//创建Firefox浏览器实例
-		driver=new FirefoxDriver();
-		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
-		//driver= new ChromeDriver();
+		//driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
+		driver= new ChromeDriver();
 		//System.setProperty("webdriver.ie.driver", "D:\\work\\selenium\\tools\\IEDriverServer.exe");
 		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get(url);
 		
 	}
@@ -207,6 +212,13 @@ public class CommonFunctions{
         } 
     }
 	
+	/**
+	 * 鼠标悬停操作
+	 */
+	public void moveToElement(By selector){
+		Actions builder=new Actions(driver);
+		builder.moveToElement(driver.findElement(selector)).perform();
+	}
 	
 	
 	
@@ -216,12 +228,12 @@ public class CommonFunctions{
 	* @param psd:密码
 	* @throws Exception
 	*/
-	public void login(String name,String psd) throws Exception{
+	public void login(String name,String pwd) throws Exception{
 		
 		clickitem("xpath", ".//*[@id='app']/div/div[2]/div[1]/div[1]/div[1]/form/div[1]/div/a");//点击首页的登录按钮
         Thread.sleep(3000);
 		this.inputvalue("css", "div>input[type='text']", name);
-		this.inputvalue("css", "div>input[type='password']", psd);
+		this.inputvalue("css", "div>input[type='password']", pwd);
 		this.clickitem("classname", "button-block");
 		Thread.sleep(3000);
 		
@@ -232,8 +244,7 @@ public class CommonFunctions{
 	 * @param drivername
 	 * @param filename
 	 */
-	public static void snapshot(TakesScreenshot drivername, String filename)
-	  {
+	public static void snapshot(TakesScreenshot drivername, String filename){
 	           
 	    String currentPath = System.getProperty("user.dir"); //get current work folder
 	    System.out.println(currentPath);
@@ -254,7 +265,22 @@ public class CommonFunctions{
 	        }
 	  }
 	
+	/**
+	 * 隐式等待
+	 * @param by
+	 * @param time
+	 * @return
+	 */
 	
+	public boolean isByElementDisplayed(By by, int time) {
+	    boolean status = false;
+	    if (driver.findElement(by).isDisplayed() == false) {
+	        driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+	    } else {
+	        status = true;
+	    }
+	    return status;
+	}
 	
 
 }

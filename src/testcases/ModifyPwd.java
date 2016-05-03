@@ -32,7 +32,7 @@ public class ModifyPwd extends DataProvide {
     public void testmodifypwd(Document params) throws Exception {
            	
     	//登录
-    	comfun.login("13988880005","123456");
+    	comfun.login(dr.readnodevalue(params,"ModifyPwd","cellphone"),dr.readnodevalue(params,"ModifyPwd","password"));
     	//点击用户名，切换到个人账户页面
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
     	Thread.sleep(3000);
@@ -40,21 +40,21 @@ public class ModifyPwd extends DataProvide {
     	comfun.clickitem("xpath",dr.readnodevalue(params,"AccountPage","reset"));
     	Thread.sleep(3000);
     	//输入旧密码
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","oldpwd"),"123456");
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","oldpwd"),dr.readnodevalue(params,"ModifyPwd","password"));
     	//输入新密码
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","newpwd"),"1234567");
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","newpwd"),dr.readnodevalue(params,"ModifyPwd","newpwd"));
     	//重复新密码
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","repwd"),"1234567");
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","repwd"),dr.readnodevalue(params,"ModifyPwd","newpwd"));
     	//保存修改
     	comfun.clickitem("xpath",dr.readnodevalue(params,"ResetPage","save"));
     	//验证
     	Thread.sleep(1000);
-    	comfun.checkequal("修改成功",comfun.gettext("xpath",dr.readnodevalue(params,"ResetPage","tips")));
+    	comfun.checkequal(dr.readnodevalue(params,"ModifyPwd","tips"),comfun.gettext("xpath",dr.readnodevalue(params,"ResetPage","tips")));
     	
     	//密码还原
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","oldpwd"),"1234567");
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","newpwd"),"123456");
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","repwd"),"123456");
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","oldpwd"),dr.readnodevalue(params,"ModifyPwd","newpwd"));
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","newpwd"),dr.readnodevalue(params,"ModifyPwd","password"));
+    	comfun.inputvalue("xpath",dr.readnodevalue(params,"ResetPage","repwd"),dr.readnodevalue(params,"ModifyPwd","password"));
     	comfun.clickitem("xpath",dr.readnodevalue(params,"ResetPage","save"));
     	    	
     }

@@ -2,8 +2,10 @@ package testcases;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ import commonfunction.DataReader;
 
 /*登录之后，上传文档，结算下单*/
 
-public class Order extends DataProvide {
+public class WaitDemo extends DataProvide {
 	
 	public CommonFunctions comfun;
 	public DataReader dr;
@@ -49,10 +51,18 @@ public class Order extends DataProvide {
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","docx"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","doc"));
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
-		Thread.sleep(30000);
-		//CommonFunctions.driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		//Thread.sleep(30000);
+		//CommonFunctions.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		//comfun.isByElementDisplayed(By.xpath(".//*[@id='app']/div/div[2]/div[4]/button"),10);
 		//结算
 		comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
+		/*boolean flag=comfun.isByElementDisplayed(By.xpath(""),10);
+		if(flag){
+			comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
+		}else{
+			System.out.print("aaaaaaaaaaaaaaaaaa");
+		}*/
+		
 		Thread.sleep(3000);
 		//修改打印列表中第一个文件页面布局、选择1页2面
 		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","droplayout"));
@@ -80,7 +90,7 @@ public class Order extends DataProvide {
     	/**
   	   * 截图、退出浏览器
   	   */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"Order.png");
+    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"WaitDemo.png");
     	comfun.teardown();
     }
 

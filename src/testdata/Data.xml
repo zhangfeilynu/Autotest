@@ -186,7 +186,15 @@
             <tips>html/body/div[2]/div/span/div/div/div/span</tips><!-- 取消订单成功的提示 -->
         </PaidPage>
         
-        
+        <WenkuPage name="文库首页">
+            <fork>html/body/div[1]/div[1]/div[4]/a</fork><!-- 文库首页叉号（第一次进入时有） -->
+            <text>html/body/div[1]/div[1]/div[2]/form/md-content/div[2]/div[1]/input</text><!-- 搜索输入框 -->
+            <search>html/body/div[1]/div[1]/div[2]/form/md-content/div[2]/div[1]/button</search><!-- 搜索按钮 -->
+            
+            <!-- 以下是搜索文档后的页面元素 -->
+            
+            
+        </WenkuPage>
         
         
         
@@ -197,6 +205,112 @@
             <password>123456</password><!-- 密码 -->
             <checkpoint>login</checkpoint><!-- 检查点 -->
         </Login>
+        
+        <LoginFail name="登录，密码错误">
+            <cellphone>13988880000</cellphone><!-- 手机号 -->
+            <password>1234567</password><!-- 密码 -->
+            <checkpoint>用户名或者密码错误。</checkpoint><!-- 检查点(提示信息) -->
+        </LoginFail>
+        
+        <Register name="免费注册">
+            <post>http://121.43.101.211:8180/suime-user/rest/v2/student/invalid/mobile/13988880008</post><!-- 删除上次注册手机号的请求  -->
+            <username>Register</username><!-- 用户名 -->
+            <cellphone>13988880008</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <imgVerifyCode>asdf</imgVerifyCode><!-- 图形验证码 -->
+            <verificationCode>123456</verificationCode><!-- 短信验证码 -->
+            <tips>注册成功</tips><!-- 注册成功提示 -->
+        </Register>
+        
+        <ErrPRegister name="注册，图形验证码错误">
+            <username>Register</username><!-- 用户名 -->
+            <cellphone>13988880007</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <imgVerifyCode>qwer</imgVerifyCode><!-- 图形验证码 -->
+            <tips>图形验证码错误</tips><!-- 错误提示 -->
+        </ErrPRegister>
+        
+        <ErrMRegister name="注册，短信验证码错误">
+            <username>Register</username><!-- 用户名 -->
+            <cellphone>13988880007</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <imgVerifyCode>asdf</imgVerifyCode><!-- 图形验证码 -->
+            <verificationCode>654321</verificationCode><!-- 短信验证码 -->
+            <tips>短信验证码错误</tips><!-- 错误提示 -->
+        </ErrMRegister>
+        
+        <DupRegister name="重复注册">
+            <username>Register</username><!-- 用户名 -->
+            <cellphone>13988880000</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <imgVerifyCode>asdf</imgVerifyCode><!-- 图形验证码 -->
+            <tips>该手机号码已注册。</tips><!-- 错误提示 -->
+        </DupRegister>
+        
+        <Order name="上传文档，结算下单">
+            <cellphone>13988880001</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <pdf>F:\\testfiles\\测试文件5.pdf</pdf><!-- pdf文件 -->
+            <pptx>F:\\testfiles\\测试文件4.pptx</pptx><!-- pptx文件 -->
+            <ppt>F:\\testfiles\\测试文件3.ppt</ppt><!-- ppt文件 -->
+            <docx>F:\\testfiles\\测试文件2.docx</docx><!-- docx文件 -->
+            <doc>F:\\testfiles\\测试文件1.doc</doc><!-- doc文件 -->
+            <checkpoint>我的收银台</checkpoint><!-- 检查点（支付宝页面） -->
+        </Order>
+        
+        <CancelOrder name="取消订单">
+            <cellphone>13988880001</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <tips>取消订单成功!</tips><!-- 取消成功提示 -->
+        </CancelOrder>
+        
+        <Pay name="待支付订单-支付">
+            <cellphone>13988880001</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <checkpoint>我的收银台</checkpoint><!-- 检查点（支付宝页面） -->
+        </Pay>
+        
+        <CancelPay name="待支付订单-取消支付">
+            <cellphone>13988880001</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+        </CancelPay>
+        
+        <PrintShop name="选择楼栋">
+            <cellphone>13988880002</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <checkpoint>上海交通大学 好精神</checkpoint><!-- 检查点（学校名称+楼栋名称） -->
+        </PrintShop>
+        
+        <ModifyData name="修改个人资料">
+            <cellphone>13988880003</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <photo>F:\\testfiles\\P5123511.JPG</photo><!-- 头像 -->
+            <realname>测试用户</realname><!-- 姓名 -->
+            <username>ModifyData</username><!-- 用户名 -->
+            <email>test@sui.me</email><!-- 邮箱 -->
+            <dorm>西校区男1宿舍楼</dorm><!-- 楼栋 -->
+            <room>610</room><!-- 寝室 -->
+            <address>东方路1号</address><!-- 地址 -->
+            <qq>121404901</qq><!-- QQ号码 -->
+            <about>自动化测试用户</about><!-- 简介 -->
+            <tips>提交成功</tips><!-- 提交成功提示 -->
+        </ModifyData>
+        
+        <ModifyPwd name="安全中心-修改密码-还原密码">
+            <cellphone>13988880005</cellphone><!-- 手机号 -->
+            <password>123456</password><!-- 密码 -->
+            <newpwd>1234567</newpwd><!-- 新密码 -->
+            <tips>修改成功</tips><!-- 提示修改成功 -->
+        </ModifyPwd>
+        
+        <ResetPwd name="登录页面，重置密码">
+            <cellphone>13988880004</cellphone><!-- 手机号 -->
+            <newpwd>123456</newpwd><!-- 新密码 -->
+            <imgVerifyCode>asdf</imgVerifyCode><!-- 图形验证码 -->
+            <verificationCode>123456</verificationCode><!-- 短信验证码 -->
+            <tips>密码重置成功,请登录</tips><!-- 成功提示 -->
+        </ResetPwd>
+        
      
          
 </testdata>

@@ -32,7 +32,7 @@ public class PrintShop extends DataProvide {
     public void testprint(Document params) throws Exception {
     	    	
     	//登录
-    	comfun.login("13988880002","123456");
+    	comfun.login(dr.readnodevalue(params,"PrintShop","cellphone"),dr.readnodevalue(params,"PrintShop","password"));
     	//点击学校
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","dorm"));
     	Thread.sleep(1000);
@@ -46,7 +46,7 @@ public class PrintShop extends DataProvide {
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","choosedorm"));
     	Thread.sleep(1000);
     	//验证楼栋
-    	comfun.checkequal("上海交通大学 好精神",comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
+    	comfun.checkequal(dr.readnodevalue(params,"PrintShop","checkpoint"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
       	
     }
   

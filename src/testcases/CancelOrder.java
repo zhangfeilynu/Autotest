@@ -33,7 +33,7 @@ public class CancelOrder extends DataProvide {
     public void testcancelorder(Document params) throws Exception {
     	
        	//登录
-    	comfun.login("13988880001","123456");
+    	comfun.login(dr.readnodevalue(params,"CancelOrder","cellphone"),dr.readnodevalue(params,"CancelOrder","password"));
     	//点击用户名
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
     	Thread.sleep(3000);
@@ -48,7 +48,7 @@ public class CancelOrder extends DataProvide {
         alert.accept();
         //验证（提示取消成功）
         Thread.sleep(1000);
-        comfun.checkequal("取消订单成功!",comfun.gettext("xpath",dr.readnodevalue(params,"PaidPage","tips")));
+        comfun.checkequal(dr.readnodevalue(params,"CancelOrder","tips"),comfun.gettext("xpath",dr.readnodevalue(params,"PaidPage","tips")));
     	
     	
     	

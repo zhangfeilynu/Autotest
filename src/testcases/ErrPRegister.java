@@ -32,18 +32,18 @@ public class ErrPRegister extends DataProvide {
     public void testerrpreg(Document params) throws Exception {
     	    	  	
     	//输入用户名
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"Register");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),dr.readnodevalue(params,"ErrPRegister","username"));
     	//输入手机号
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),"13988880000");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),dr.readnodevalue(params,"ErrPRegister","cellphone"));
     	//输入密码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),dr.readnodevalue(params,"ErrPRegister","password"));
     	//输入错误的图形验证码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),"qwer");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),dr.readnodevalue(params,"ErrPRegister","imgVerifyCode"));
     	//点击获取按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
     	//提示验证码错误
     	Thread.sleep(1000);
-    	comfun.checkequal("图形验证码错误",comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
+    	comfun.checkequal(dr.readnodevalue(params,"ErrPRegister","tips"),comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
   
     }
 

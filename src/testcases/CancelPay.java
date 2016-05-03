@@ -1,6 +1,7 @@
 package testcases;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -33,7 +34,7 @@ public class CancelPay extends DataProvide {
     public void testcancelpay(Document params) throws Exception {
     	
     	//登录
-    	comfun.login("13988880001","123456");
+    	comfun.login(dr.readnodevalue(params,"CancelPay","cellphone"),dr.readnodevalue(params,"CancelPay","password"));
     	//点击用户名
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
     	Thread.sleep(3000);
@@ -46,7 +47,7 @@ public class CancelPay extends DataProvide {
     	Thread.sleep(3000);
     	Alert alert = CommonFunctions.driver.switchTo().alert(); 
         alert.dismiss();
-  	
+         	
     }
   
 

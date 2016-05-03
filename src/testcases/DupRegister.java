@@ -32,18 +32,18 @@ public class DupRegister extends DataProvide {
     public void testdupreg(Document params) throws Exception {
     	    	    	
     	//输入用户名
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),"DupRegister");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","username"),dr.readnodevalue(params,"DupRegister","username"));
     	//输入已注册过的手机号
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),"13988880000");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","cellphone"),dr.readnodevalue(params,"DupRegister","cellphone"));
     	//输入密码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),"123456");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","password"),dr.readnodevalue(params,"DupRegister","password"));
     	//输入图形验证码
-    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),"asdf");
+    	comfun.inputvalue("name",dr.readnodevalue(params,"HomePage","imgVerifyCode"),dr.readnodevalue(params,"DupRegister","imgVerifyCode"));
     	//点击获取按钮
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","obtain"));
     	//提示已注册
     	Thread.sleep(1000);
-    	comfun.checkequal("该手机号码已注册。",comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
+    	comfun.checkequal(dr.readnodevalue(params,"DupRegister","tips"),comfun.gettext("css",dr.readnodevalue(params,"HomePage","tips")));
        
     }
 

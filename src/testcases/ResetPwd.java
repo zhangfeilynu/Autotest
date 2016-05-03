@@ -35,22 +35,22 @@ public class ResetPwd extends DataProvide{
 	  comfun.clickitem("xpath",dr.readnodevalue(params,"LoginPage","resetpwd"));
 	  Thread.sleep(3000);
 	  //输入手机号
-	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","cellphone"),"13988880004");
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","cellphone"),dr.readnodevalue(params,"ResetPwd","cellphone"));
 	  //输入新密码
-	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","newpwd"),"123456");
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","newpwd"),dr.readnodevalue(params,"ResetPwd","newpwd"));
 	  //确认密码
-	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","conpwd"),"123456");
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","conpwd"),dr.readnodevalue(params,"ResetPwd","newpwd"));
 	  //输入图形验证码
-	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","imgVerifyCode"),"asdf");
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","imgVerifyCode"),dr.readnodevalue(params,"ResetPwd","imgVerifyCode"));
 	  //点击获取按钮
 	  comfun.clickitem("xpath",dr.readnodevalue(params,"PassportPage","obtain"));
 	  //输入短信验证码
-	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","verificationCode"),"123456");
+	  comfun.inputvalue("xpath",dr.readnodevalue(params,"PassportPage","verificationCode"),dr.readnodevalue(params,"ResetPwd","verificationCode"));
 	  //点击重置密码按钮
 	  comfun.clickitem("xpath",dr.readnodevalue(params,"PassportPage","submit"));
 	  //验证（成功提示）
 	  Thread.sleep(1000);
-	  comfun.checkequal("密码重置成功,请登录",comfun.gettext("xpath",dr.readnodevalue(params,"PassportPage","tips")));
+	  comfun.checkequal(dr.readnodevalue(params,"ResetPwd","tips"),comfun.gettext("xpath",dr.readnodevalue(params,"PassportPage","tips")));
 	  
 	  
    }

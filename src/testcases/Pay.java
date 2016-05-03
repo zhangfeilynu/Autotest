@@ -33,7 +33,7 @@ public class Pay extends DataProvide {
     public void testpay(Document params) throws Exception {
     	    	   	
     	//登录
-    	comfun.login("13988880001","123456");
+    	comfun.login(dr.readnodevalue(params,"Pay","cellphone"),dr.readnodevalue(params,"Pay","password"));
     	//点击用户名，切换到用户账户页面
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
     	Thread.sleep(3000);
@@ -48,7 +48,7 @@ public class Pay extends DataProvide {
         alert.accept();
         //验证支付宝页面
         Thread.sleep(8000);
-        comfun.checkequal("我的收银台",comfun.gettext("classname",dr.readnodevalue(params,"AlipayPage","checkpoint")));
+        comfun.checkequal(dr.readnodevalue(params,"Pay","checkpoint"),comfun.gettext("classname",dr.readnodevalue(params,"AlipayPage","checkpoint")));
     	
     }
  
