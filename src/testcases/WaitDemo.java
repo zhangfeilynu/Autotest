@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -41,29 +44,26 @@ public class WaitDemo extends DataProvide {
 		comfun.login(dr.readnodevalue(params,"Order","cellphone"),dr.readnodevalue(params,"Order","password"));
 		//切换到打印页面
 		comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","print"));
-		Thread.sleep(3000);
+		
+		//Thread.sleep(3000);
+		
 		//取消上传控件的隐藏属性
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
 		//上传文件(doc、docx、ppt、pptx、pdf)、隐藏上传控件
+		comfun.waitpresenceOfElementLocated(10, By.xpath(dr.readnodevalue(params,"PrintPage","file")));
 		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","pdf"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","pptx"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","ppt"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","docx"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","doc"));
 		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
-		//Thread.sleep(30000);
-		//CommonFunctions.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		//comfun.isByElementDisplayed(By.xpath(".//*[@id='app']/div/div[2]/div[4]/button"),10);
+		Thread.sleep(10000);
+		//comfun.waitpresenceOfElementLocated(10, By.xpath(".//*[@id='app']/div/div[2]/div[4]/button"));
 		//结算
-		comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
-		/*boolean flag=comfun.isByElementDisplayed(By.xpath(""),10);
-		if(flag){
-			comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
-		}else{
-			System.out.print("aaaaaaaaaaaaaaaaaa");
-		}*/
 		
-		Thread.sleep(3000);
+		comfun.clickitem("xpath",dr.readnodevalue(params,"PrintPage","settlement"));
+		//Thread.sleep(3000);
+		comfun.waitpresenceOfElementLocated(10, By.xpath(dr.readnodevalue(params,"CartPage","droplayout")));
 		//修改打印列表中第一个文件页面布局、选择1页2面
 		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","droplayout"));
 		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","layout2"));
@@ -76,7 +76,8 @@ public class WaitDemo extends DataProvide {
 		
 		//确认下单
 		comfun.clickitem("xpath",dr.readnodevalue(params,"CartPage","submit"));
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
+		comfun.waitpresenceOfElementLocated(10, By.className(dr.readnodevalue(params,"AlipayPage","checkpoint")));
 		//验证支付页面
 		comfun.checkequal(dr.readnodevalue(params,"Order","checkpoint"),comfun.gettext("classname",dr.readnodevalue(params,"AlipayPage","checkpoint")));
 		

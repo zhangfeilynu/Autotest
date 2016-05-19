@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Suite" parallel="false">
     
-    <listeners>
+    <!-- <listeners>
      <listener class-name="commonfunction.RetryListener" />
-    </listeners>
+    </listeners> -->
     
   <test name="Login">
     <classes>

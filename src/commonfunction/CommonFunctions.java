@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
@@ -36,9 +38,9 @@ public class CommonFunctions{
 	
 	public CommonFunctions(String url){
 		//创建Firefox浏览器实例
-		//driver=new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
-		driver= new ChromeDriver();
+		driver=new FirefoxDriver();
+		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
+		//driver= new ChromeDriver();
 		//System.setProperty("webdriver.ie.driver", "D:\\work\\selenium\\tools\\IEDriverServer.exe");
 		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
@@ -281,6 +283,124 @@ public class CommonFunctions{
 	    }
 	    return status;
 	}
+	
+		
+	/**
+	 * 显式等待
+	 * @param by
+	 * @param time
+	 */
+	
+	public void waitelement(By by,long time){
+		new WebDriverWait(driver,time).until(ExpectedConditions.presenceOfElementLocated(by)).click();
+	}
+	
+	
+	/**
+	 * 显式等待2
+	 * @param by
+	 * @param time
+	 */
+	
+	public void waitxs(final By by,long time){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		wait.until(new ExpectedCondition<WebElement>(){
+			@Override
+			public WebElement apply(WebDriver d){
+				return d.findElement(by);
+			}
+		});
+		
+	}
+	
+	/**
+	 * 显示等待
+	 * @param time
+	 * @param by
+	 * @return
+	 */
+	
+	public static WebElement waitForelement(long time,By by){
+		
+		WebElement targetElement=(new WebDriverWait(driver,time)).until(ExpectedConditions.presenceOfElementLocated(by));
+		return targetElement;
+		
+	}
+	
+	/**
+	 * 检测页面title
+	 * @param time
+	 * @param title
+	 * @return
+	 */
+	public  Boolean waitTitleis(long time,String title){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		Boolean element=wait.until(ExpectedConditions.titleIs(title));
+		return element;
+		
+	}
+	
+	/**
+	 * 检查标题包含一个区分大小写的子字符串
+	 * @param time
+	 * @param title
+	 * @return
+	 */
+	public Boolean waittitleContains(long time,String title){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		Boolean element=wait.until(ExpectedConditions.titleContains(title));
+		return element;
+		
+	}
+	
+	/**
+	 * 检查一个元素出现在页面的DOM，元素不一定可见
+	 * @param time
+	 * @param locator
+	 * @return
+	 */
+	public WebElement waitpresenceOfElementLocated(long time,By locator){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		WebElement element=wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		return element;
+		
+	}
+	
+	/**
+	 * 检查一个元素出现在页面的DOM,并且可见
+	 * @param time
+	 * @param locator
+	 * @return
+	 */
+	public WebElement waitvisibilityOfElementLocated(long time,By locator){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element;
+			
+	}
+	
+	/**
+	 * 检查一个元素,出现在页面的DOM,是可见的
+	 * @param time
+	 * @param locator
+	 * @return
+	 */
+	public WebElement waitvisibilityOf(long time,By locator){
+		
+		WebDriverWait wait=new WebDriverWait(driver,time);
+		WebElement element=wait.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
+		return element;
+		
+	}
+	
+	
+
+
 	
 
 }

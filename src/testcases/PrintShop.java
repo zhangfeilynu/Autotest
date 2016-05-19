@@ -1,5 +1,6 @@
 package testcases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -43,7 +44,9 @@ public class PrintShop extends DataProvide {
     	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","chooseschool"));
     	Thread.sleep(1000);
     	//选择楼栋 
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","choosedorm"));
+    	//comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","choosedorm"));
+    	//CommonFunctions.driver.findElement(By.linkText("好精神")).click();
+    	comfun.clickitem("text","好精神");
     	Thread.sleep(1000);
     	//验证楼栋
     	comfun.checkequal(dr.readnodevalue(params,"PrintShop","checkpoint"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
