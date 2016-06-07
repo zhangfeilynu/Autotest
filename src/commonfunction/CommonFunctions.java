@@ -29,7 +29,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class CommonFunctions{
 	
-	static public WebDriver driver;
+	public static WebDriver driver;
 	
 	/*构造函数*/
 	public CommonFunctions(){
@@ -37,6 +37,7 @@ public class CommonFunctions{
 	}
 	
 	public CommonFunctions(String url){
+		
 		//创建Firefox浏览器实例
 		driver=new FirefoxDriver();
 		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
@@ -46,8 +47,14 @@ public class CommonFunctions{
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get(url);
-		
+				
 	}
+	
+	public WebDriver getDriver(){
+		return driver;
+	}
+	
+	
 	
 	/*打开网页
 	@param url 要打开的URL
