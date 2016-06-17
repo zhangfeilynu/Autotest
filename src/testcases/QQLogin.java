@@ -48,7 +48,8 @@ public class QQLogin extends DataProvide{
     	/**
     	 *截图、退出浏览器
     	 */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"QQLogin.png");
-        comfun.teardown();
+    	//CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"QQLogin.png");
+    	CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"QQLogin.png");
+    	comfun.teardown();
   }
 }

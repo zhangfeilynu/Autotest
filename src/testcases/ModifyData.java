@@ -3,110 +3,117 @@ package testcases;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.w3c.dom.Document;
 
 import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
+import commonfunction.DotTestListener;
 
 /*修改个人资料*/
 
-
-public class ModifyData extends DataProvide {
+@Listeners({DotTestListener.class})
+public class ModifyData extends CommonFunctions {
 	
-	public CommonFunctions comfun;
-	public DataReader dr;
+	/*public CommonFunctions comfun;
+	public DataReader dr;*/
 	
-	@BeforeTest
-	public void beforeClass() throws Exception {
-		String url="http://test2.sui.me/";
+	@BeforeClass
+	public void before() throws Exception {
+		/*String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
 		//设置数据源
 		//init("src/testdata/ModifyData.xml");
-		init("src/testdata/Data.xml");
+		init("src/testdata/Data.xml");*/
+		setup();
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testmodifydata(Document params) throws Exception {
     	    	
     	//登录
-    	comfun.login(dr.readnodevalue(params,"ModifyData","cellphone"),dr.readnodevalue(params,"ModifyData","password"));
+    	login(dr.readnodevalue(params,"ModifyData","cellphone"),dr.readnodevalue(params,"ModifyData","password"));
     	//点击用户名，切换到个人账户页面
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
+    	clickitem("xpath",dr.readnodevalue(params,"HomePage","personal"));
     	Thread.sleep(3000);
     	//切换到个人资料页面
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"AccountPage","info"));
+    	clickitem("xpath",dr.readnodevalue(params,"AccountPage","info"));
     	Thread.sleep(3000);
     	//修改图像(取消控件的隐藏属性)
-    	((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
-    	comfun.inputvalue("css",dr.readnodevalue(params,"InfoPage","photo"),dr.readnodevalue(params,"ModifyData","photo"));
+    	//((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
+    	((JavascriptExecutor)driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
+    	inputvalue("css",dr.readnodevalue(params,"InfoPage","photo"),dr.readnodevalue(params,"ModifyData","photo"));
     	Thread.sleep(8000);
     	//修改姓名
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","realname"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","realname"),dr.readnodevalue(params,"ModifyData","realname"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","realname"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","realname"),dr.readnodevalue(params,"ModifyData","realname"));
     	//修改用户名
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","username"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","username"),dr.readnodevalue(params,"ModifyData","username"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","username"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","username"),dr.readnodevalue(params,"ModifyData","username"));
     	//修改邮箱
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","email"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","email"),dr.readnodevalue(params,"ModifyData","email"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","email"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","email"),dr.readnodevalue(params,"ModifyData","email"));
     	//修改学校
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropschool"));
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","school"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropschool"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","school"));
     	//选择入学年份
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropyear"));
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","year"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropyear"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","year"));
     	//修改楼栋
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","dorm"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","dorm"),dr.readnodevalue(params,"ModifyData","dorm"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","dorm"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","dorm"),dr.readnodevalue(params,"ModifyData","dorm"));
     	//修改寝室
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","room"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","room"),dr.readnodevalue(params,"ModifyData","room"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","room"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","room"),dr.readnodevalue(params,"ModifyData","room"));
     	//修改地址
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","address"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","address"),dr.readnodevalue(params,"ModifyData","address"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","address"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","address"),dr.readnodevalue(params,"ModifyData","address"));
     	//修改专业
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor1"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor1"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","major1"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","major1"));
     	
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor2"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor2"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","major2"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","major2"));
     	
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor3"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropmajor3"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","major3"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","major3"));
     	//修改qq
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","qq"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","qq"),dr.readnodevalue(params,"ModifyData","qq"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","qq"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","qq"),dr.readnodevalue(params,"ModifyData","qq"));
     	//性取向
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropsex"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","dropsex"));
     	Thread.sleep(1000);
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","sex"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","sex"));
     	//修改简介
-    	comfun.clearvalue("xpath",dr.readnodevalue(params,"InfoPage","about"));
-    	comfun.inputvalue("xpath",dr.readnodevalue(params,"InfoPage","about"),dr.readnodevalue(params,"ModifyData","about"));
+    	clearvalue("xpath",dr.readnodevalue(params,"InfoPage","about"));
+    	inputvalue("xpath",dr.readnodevalue(params,"InfoPage","about"),dr.readnodevalue(params,"ModifyData","about"));
     	//保存修改
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"InfoPage","save"));
+    	clickitem("xpath",dr.readnodevalue(params,"InfoPage","save"));
     	//验证修改
     	Thread.sleep(1000);
-    	comfun.checkequal(dr.readnodevalue(params,"ModifyData","tips"),comfun.gettext("xpath",dr.readnodevalue(params,"InfoPage","tips")));
+    	checkequal(dr.readnodevalue(params,"ModifyData","tips"),gettext("xpath",dr.readnodevalue(params,"InfoPage","tips")));
        	
     }
   
 
-    @AfterTest
-    public void afterClass() throws Exception {
+    @AfterClass
+    public void after() {
     	/**
   	   * 截图、退出浏览器
   	   */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"ModifyData.png");
-    	comfun.teardown();
+    	//CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"ModifyData.png");
+    	//CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"ModifyData.png");
+    	teardown();
     }
 
 }

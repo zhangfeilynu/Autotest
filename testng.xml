@@ -90,4 +90,10 @@
     </classes>
   </test> <!--CancelPay-->
   
+  <test name="WenKu">
+    <classes>
+      <class name="testcases.WenKu"/>
+    </classes>
+  </test> <!--WenKu-->
+  
 </suite> <!-- Suite -->

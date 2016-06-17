@@ -48,7 +48,8 @@ public class WaitDemo extends DataProvide {
 		//Thread.sleep(3000);
 		
 		//取消上传控件的隐藏属性
-		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
+		//((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
+		((JavascriptExecutor)comfun.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display=''");
 		//上传文件(doc、docx、ppt、pptx、pdf)、隐藏上传控件
 		comfun.waitpresenceOfElementLocated(10, By.xpath(dr.readnodevalue(params,"PrintPage","file")));
 		comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","pdf"));
@@ -56,7 +57,8 @@ public class WaitDemo extends DataProvide {
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","ppt"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","docx"));
 		//comfun.inputvalue("xpath",dr.readnodevalue(params,"PrintPage","file"),dr.readnodevalue(params,"Order","doc"));
-		((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
+		//((JavascriptExecutor)CommonFunctions.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
+		((JavascriptExecutor)comfun.driver).executeScript("var inputs = document.getElementsByTagName('input');inputs[0].style.display='none'");
 		Thread.sleep(10000);
 		//comfun.waitpresenceOfElementLocated(10, By.xpath(".//*[@id='app']/div/div[2]/div[4]/button"));
 		//结算
@@ -91,7 +93,8 @@ public class WaitDemo extends DataProvide {
     	/**
   	   * 截图、退出浏览器
   	   */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"WaitDemo.png");
+    	//CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"WaitDemo.png");
+    	CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"WaitDemo.png");
     	comfun.teardown();
     }
 

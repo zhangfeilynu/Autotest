@@ -44,7 +44,8 @@ public class TestDemo extends DataProvide{
     	/**
     	 *截图、退出浏览器
     	 */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"TestDemo.png");
-        comfun.teardown();
+    	//CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"TestDemo.png");
+    	CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"TestDemo.png");
+    	comfun.teardown();
   }
 }

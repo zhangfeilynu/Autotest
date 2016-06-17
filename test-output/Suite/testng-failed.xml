@@ -1,786 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test name="Login">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Order(failed)">
     <classes>
-      <class name="testcases.Login"/>
-    </classes>
-  </test> <!-- Login -->
-  <test name="Register">
-    <classes>
-      <class name="testcases.Register"/>
-    </classes>
-  </test> <!-- Register -->
-  <test name="Order">
-    <classes>
-      <class name="testcases.Order"/>
-    </classes>
-  </test> <!-- Order -->
-  <test name="CancelOrder">
-    <classes>
-      <class name="testcases.CancelOrder"/>
-    </classes>
-  </test> <!-- CancelOrder -->
-  <test name="PrintShop">
-    <classes>
-      <class name="testcases.PrintShop"/>
-    </classes>
-  </test> <!-- PrintShop -->
-  <test name="ModifyData">
-    <classes>
-      <class name="testcases.ModifyData"/>
-    </classes>
-  </test> <!-- ModifyData -->
-  <test name="DupRegister">
-    <classes>
-      <class name="testcases.DupRegister"/>
-    </classes>
-  </test> <!-- DupRegister -->
-  <test name="ErrPRegister">
-    <classes>
-      <class name="testcases.ErrPRegister"/>
-    </classes>
-  </test> <!-- ErrPRegister -->
-  <test name="ErrMRegister">
-    <classes>
-      <class name="testcases.ErrMRegister"/>
-    </classes>
-  </test> <!-- ErrMRegister -->
-  <test name="LoginFail">
-    <classes>
-      <class name="testcases.LoginFail"/>
-    </classes>
-  </test> <!-- LoginFail -->
-  <test name="ResetPwd">
-    <classes>
-      <class name="testcases.ResetPwd"/>
-    </classes>
-  </test> <!-- ResetPwd -->
-  <test name="ModifyPwd">
-    <classes>
-      <class name="testcases.ModifyPwd"/>
-    </classes>
-  </test> <!-- ModifyPwd -->
-  <test name="Pay">
-    <classes>
-      <class name="testcases.Pay"/>
-    </classes>
-  </test> <!-- Pay -->
-  <test name="CancelPay">
-    <classes>
-      <class name="testcases.CancelPay"/>
-    </classes>
-  </test> <!-- CancelPay -->
-  <test name="PrintShop(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyPwd -->
       <class name="testcases.PrintShop">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="testprint" invocation-numbers="0"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ResetPwd">
+      <class name="testcases.CancelOrder">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
+      </class> <!-- testcases.CancelOrder -->
+      <class name="testcases.DupRegister">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- testcases.ErrMRegister -->
+      </class> <!-- testcases.DupRegister -->
       <class name="testcases.Pay">
         <methods>
-          <include name="beforeClass"/>
+          <include name="before"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- testcases.Pay -->
       <class name="testcases.Register">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.Register -->
       <class name="testcases.ErrPRegister">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- PrintShop(failed) -->
-  <test name="CancelOrder(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="testcancelorder" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
       <class name="testcases.CancelPay">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.CancelPay -->
+      <class name="testcases.ErrMRegister">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- testcases.ErrMRegister -->
       <class name="testcases.LoginFail">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.LoginFail -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Order -->
       <class name="testcases.ModifyPwd">
         <methods>
           <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ResetPwd">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- CancelOrder(failed) -->
-  <test name="Order(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
       <class name="testcases.Order">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
           <include name="testorder" invocation-numbers="0"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
+      <class name="testcases.ModifyData">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
-      </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
+      </class> <!-- testcases.ModifyData -->
       <class name="testcases.ResetPwd">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
+      <class name="testcases.WenKu">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
+      </class> <!-- testcases.WenKu -->
+      <class name="testcases.Login">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
+      </class> <!-- testcases.Login -->
     </classes>
   </test> <!-- Order(failed) -->
-  <test name="Login(failed)" parallel="tests">
+  <test name="ModifyPwd(failed)">
     <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="testlogin" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyPwd -->
       <class name="testcases.PrintShop">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ResetPwd">
+      <class name="testcases.CancelOrder">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
+      </class> <!-- testcases.CancelOrder -->
+      <class name="testcases.DupRegister">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- testcases.ErrMRegister -->
+      </class> <!-- testcases.DupRegister -->
       <class name="testcases.Pay">
         <methods>
-          <include name="beforeClass"/>
+          <include name="before"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- testcases.Pay -->
       <class name="testcases.Register">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.Register -->
       <class name="testcases.ErrPRegister">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- Login(failed) -->
-  <test name="ResetPwd(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
       <class name="testcases.CancelPay">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.CancelPay -->
-      <class name="testcases.Order">
+      <class name="testcases.ErrMRegister">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
-      </class> <!-- testcases.Order -->
+      </class> <!-- testcases.ErrMRegister -->
+      <class name="testcases.LoginFail">
+        <methods>
+          <include name="after"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- testcases.LoginFail -->
       <class name="testcases.ModifyPwd">
         <methods>
           <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="testmodifypwd" invocation-numbers="0"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.ResetPwd">
-        <methods>
-          <include name="teardown"/>
-          <include name="testresetpwd" invocation-numbers="0"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ErrMRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- ResetPwd(failed) -->
-  <test name="ModifyData(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
       <class name="testcases.ModifyData">
         <methods>
-          <include name="afterClass"/>
-          <include name="testmodifydata" invocation-numbers="0"/>
-          <include name="beforeClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
       <class name="testcases.Order">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
       </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
       <class name="testcases.ResetPwd">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
+      <class name="testcases.WenKu">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="before"/>
+          <include name="after"/>
         </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- ModifyData(failed) -->
-  <test name="CancelPay(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
+      </class> <!-- testcases.WenKu -->
       <class name="testcases.Login">
         <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
+          <include name="after"/>
+          <include name="before"/>
         </methods>
       </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="testcancelpay" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ResetPwd">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
     </classes>
-  </test> <!-- CancelPay(failed) -->
-  <test name="Pay(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.CancelOrder">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelOrder -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- testcases.Login -->
-      <class name="testcases.ModifyData">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyData -->
-      <class name="testcases.DupRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.DupRegister -->
-      <class name="testcases.LoginFail">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.LoginFail -->
-      <class name="testcases.CancelPay">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.CancelPay -->
-      <class name="testcases.Order">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Order -->
-      <class name="testcases.ModifyPwd">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ModifyPwd -->
-      <class name="testcases.PrintShop">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.PrintShop -->
-      <class name="testcases.ResetPwd">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcases.ResetPwd -->
-      <class name="testcases.ErrMRegister">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.ErrMRegister -->
-      <class name="testcases.Pay">
-        <methods>
-          <include name="testpay" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- testcases.Pay -->
-      <class name="testcases.Register">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.Register -->
-      <class name="testcases.ErrPRegister">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.ErrPRegister -->
-    </classes>
-  </test> <!-- Pay(failed) -->
+  </test> <!-- ModifyPwd(failed) -->
 </suite> <!-- Failed suite [Suite] -->

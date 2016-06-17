@@ -4,7 +4,6 @@ package commonfunction;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,28 +16,39 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.*;
-
-
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.DataProvider;
+import org.w3c.dom.Document;
+
 
 
 
 public class CommonFunctions{
 	
-	public static WebDriver driver;
+	public Document doc;
+	public DataReader dr;
+	public WebElement e;
+	public WebDriver driver;
+	public WebDriver getDriver(){
+		return driver;
+	}
 	
 	/*构造函数*/
 	public CommonFunctions(){
 		
 	}
 	
+	
 	public CommonFunctions(String url){
 		
-		//创建Firefox浏览器实例
+		/*//创建Firefox浏览器实例
 		driver=new FirefoxDriver();
 		//System.setProperty("webdriver.chrome.driver", "D:\\work\\selenium\\tools\\chromedriver.exe");
 		//driver= new ChromeDriver();
@@ -46,13 +56,24 @@ public class CommonFunctions{
 		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get(url);*/
 				
 	}
 	
-	public WebDriver getDriver(){
-		return driver;
+	/**
+	 * 创建浏览器实例、设置数据源
+	 * @throws Exception
+	 */
+	public void setup() throws Exception{
+		driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("http://test2.sui.me/");	
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		dr = new DataReader();
+		//设置数据源
+		init("src/testdata/Data.xml");
 	}
+	
 	
 	
 	
@@ -212,21 +233,30 @@ public class CommonFunctions{
 	 * @return
 	 */
 	
-	public boolean doesWebElementExist(By selector) { 
-        try { 
+	public boolean isElementExist(By locator) { 
+        /*try { 
               driver.findElement(selector); 
               return true; 
         } catch (NoSuchElementException e) { 
               return false; 
-        } 
+        } */
+		boolean flag = false;
+		try {  
+            WebElement element=driver.findElement(locator);  
+            flag=null!=element;  
+        } catch (NoSuchElementException e) {  
+            System.out.println("Element:" + locator.toString()  
+                    + " is not exsit!");  
+        }  
+        return flag;  
     }
 	
 	/**
 	 * 鼠标悬停操作
 	 */
-	public void moveToElement(By selector){
+	public void moveToElement(By locator){
 		Actions builder=new Actions(driver);
-		builder.moveToElement(driver.findElement(selector)).perform();
+		builder.moveToElement(driver.findElement(locator)).perform();
 	}
 	
 	
@@ -312,13 +342,13 @@ public class CommonFunctions{
 	public void waitxs(final By by,long time){
 		
 		WebDriverWait wait=new WebDriverWait(driver,time);
-		wait.until(new ExpectedCondition<WebElement>(){
+		e=wait.until(new ExpectedCondition<WebElement>(){
 			@Override
 			public WebElement apply(WebDriver d){
 				return d.findElement(by);
 			}
 		});
-		
+			
 	}
 	
 	/**
@@ -328,7 +358,14 @@ public class CommonFunctions{
 	 * @return
 	 */
 	
-	public static WebElement waitForelement(long time,By by){
+	/*public static WebElement waitForelement(long time,By by){
+		
+		WebElement targetElement=(new WebDriverWait(driver,time)).until(ExpectedConditions.presenceOfElementLocated(by));
+		return targetElement;
+		
+	}*/
+	
+    public  WebElement waitForelement(long time,By by){
 		
 		WebElement targetElement=(new WebDriverWait(driver,time)).until(ExpectedConditions.presenceOfElementLocated(by));
 		return targetElement;
@@ -344,7 +381,7 @@ public class CommonFunctions{
 	public  Boolean waitTitleis(long time,String title){
 		
 		WebDriverWait wait=new WebDriverWait(driver,time);
-		Boolean element=wait.until(ExpectedConditions.titleIs(title));
+		Boolean element=wait.until(ExpectedConditions.titleIs(title));		
 		return element;
 		
 	}
@@ -405,6 +442,33 @@ public class CommonFunctions{
 		
 	}
 	
+	/**
+	 * 提供数据源
+	 * @param filename
+	 * @throws Exception
+	 */
+	public void init(String filename) throws Exception{
+	    File inputXml = new File(new File(filename).getAbsolutePath());
+	    // documentBuilder为抽象不能直接实例化(将XML文件转换为DOM文件)
+	    DocumentBuilder db = null;
+	    DocumentBuilderFactory dbf = null;
+	    try {
+	        // 返回documentBuilderFactory对象
+	        dbf = DocumentBuilderFactory.newInstance();
+	        // 返回db对象用documentBuilderFatory对象获得返回documentBuildr对象
+	        db = dbf.newDocumentBuilder();
+	        // 得到一个DOM并返回给document对象
+	        doc = (Document)db.parse(inputXml);
+	        }
+	        catch (Exception e) {
+	             e.printStackTrace();
+	        }
+	  }
+	
+	 @DataProvider(name="Test_xml_dataprovider")
+	 public Object[][] providerMethod(Method method){
+	       return new Object[][]{new Object[]{doc}};
+	 }
 	
 
 

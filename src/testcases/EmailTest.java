@@ -42,6 +42,7 @@ public class EmailTest extends CommonFunctions {
 	public void testorder()throws Exception {
 		
 		System.out.println("XXXXXXXXXXXXXXX");
+		comfun.inputvalue("xpath", ".//*[@id='kw11']", "selenium");
 		
     }
 

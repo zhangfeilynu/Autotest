@@ -2,45 +2,51 @@ package testcases;
 
 import org.w3c.dom.*;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
+import commonfunction.DotTestListener;
 
 /*登录失败（用户名或 密码错误）*/
-
-public class LoginFail extends DataProvide{
-     public CommonFunctions comfun;
-     public DataReader dr;
+@Listeners({DotTestListener.class})
+public class LoginFail extends CommonFunctions{
+     /*public CommonFunctions comfun;
+     public DataReader dr;*/
   
-     @BeforeTest
-     public void setup() throws Exception{
-        String url = "http://test2.sui.me/";
+     @BeforeClass
+     public void before() throws Exception{
+        /*String url = "http://test2.sui.me/";
         comfun=new CommonFunctions(url);
         dr=new DataReader();
         //设置数据源
         //init("src/testdata/LoginFail.xml");
-        init("src/testdata/Data.xml");
+        init("src/testdata/Data.xml");*/
+    	setup();
      }
   
      @Test(dataProvider="Test_xml_dataprovider") 
      public void testloginfail(Document params) throws Exception {
        
         //登录、密码错误
-    	comfun.login(dr.readnodevalue(params,"LoginFail","cellphone"),dr.readnodevalue(params,"LoginFail","password"));
+    	login(dr.readnodevalue(params,"LoginFail","cellphone"),dr.readnodevalue(params,"LoginFail","password"));
     	//提示用户名或密码错误
-    	comfun.checkequal(dr.readnodevalue(params,"LoginFail","checkpoint"),comfun.gettext("css",dr.readnodevalue(params,"LoginPage","tips")));
+    	checkequal(dr.readnodevalue(params,"LoginFail","checkpoint"),gettext("css",dr.readnodevalue(params,"LoginPage","tips")));
      	   	 	
      }
   
-     @AfterTest
-     public void teardown() {
+     @AfterClass
+     public void after() {
 	    /**
 	     * 截图、退出浏览器
 	     */
-	    CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"LoginFail.png");
-        comfun.teardown();
+	    //CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"LoginFail.png");
+    	 //CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"LoginFail.png");
+    	 teardown();
       }
 }

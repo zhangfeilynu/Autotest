@@ -2,65 +2,71 @@ package testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.w3c.dom.Document;
 
 import commonfunction.CommonFunctions;
 import commonfunction.DataProvide;
 import commonfunction.DataReader;
+import commonfunction.DotTestListener;
 
 /*选择楼栋*/
 
-
-public class PrintShop extends DataProvide {
+@Listeners({DotTestListener.class})
+public class PrintShop extends CommonFunctions {
 	
-	public CommonFunctions comfun;
-	public DataReader dr;
+	/*public CommonFunctions comfun;
+	public DataReader dr;*/
 	
-	@BeforeTest
-	public void beforeClass() throws Exception {
-		String url="http://test2.sui.me/";
+	@BeforeClass
+	public void before() throws Exception {
+		/*String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
 		//设置数据源
 		//init("src/testdata/PrintShop.xml");
-		init("src/testdata/Data.xml");
+		init("src/testdata/Data.xml");*/
+		setup();
 	}
 	
     @Test(dataProvider = "Test_xml_dataprovider")
     public void testprint(Document params) throws Exception {
     	    	
     	//登录
-    	comfun.login(dr.readnodevalue(params,"PrintShop","cellphone"),dr.readnodevalue(params,"PrintShop","password"));
+    	login(dr.readnodevalue(params,"PrintShop","cellphone"),dr.readnodevalue(params,"PrintShop","password"));
     	//点击学校
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","dorm"));
+    	clickitem("xpath",dr.readnodevalue(params,"HomePage","dorm"));
     	Thread.sleep(1000);
     	//选择城市：上海
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","city"));
+    	clickitem("xpath",dr.readnodevalue(params,"HomePage","city"));
     	Thread.sleep(1000);
     	//选择学校：上海交通大学
-    	comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","chooseschool"));
+    	clickitem("xpath",dr.readnodevalue(params,"HomePage","chooseschool"));
     	Thread.sleep(1000);
     	//选择楼栋 
     	//comfun.clickitem("xpath",dr.readnodevalue(params,"HomePage","choosedorm"));
     	//CommonFunctions.driver.findElement(By.linkText("好精神")).click();
-    	comfun.clickitem("text","好精神");
+    	clickitem("text","好精神");
     	Thread.sleep(1000);
     	//验证楼栋
-    	comfun.checkequal(dr.readnodevalue(params,"PrintShop","checkpoint"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
+    	checkequal(dr.readnodevalue(params,"PrintShop","checkpoint"),gettext("xpath",dr.readnodevalue(params,"HomePage","schooldorm")));
       	
     }
   
 
-    @AfterTest
-    public void afterClass() throws Exception {
+    @AfterClass
+    public void after() {
     	/**
   	   * 截图、退出浏览器
   	   */
-    	CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"PrintShop.png");
-    	comfun.teardown();
+    	//CommonFunctions.snapshot((TakesScreenshot)CommonFunctions.driver,"PrintShop.png");
+    	//CommonFunctions.snapshot((TakesScreenshot)comfun.driver,"PrintShop.png");
+    	teardown();
     }
 
 }
