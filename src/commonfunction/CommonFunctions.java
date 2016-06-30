@@ -67,7 +67,8 @@ public class CommonFunctions{
 	public void setup() throws Exception{
 		driver=new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://test2.sui.me/");	
+		//driver.get("http://test2.sui.me/");
+		driver.get("http://beta.sui.me/");
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		dr = new DataReader();
 		//设置数据源

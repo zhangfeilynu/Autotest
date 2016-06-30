@@ -25,7 +25,7 @@ public class CancelOrder extends CommonFunctions {
 	public DataReader dr;*/
 	
 	@BeforeClass
-	public void before() throws Exception {
+	public void beforeClass() throws Exception {
 		/*String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
 		dr = new DataReader();
@@ -66,7 +66,7 @@ public class CancelOrder extends CommonFunctions {
   
 
     @AfterClass
-    public void after(){
+    public void afterClass(){
     	/**
   	   * 截图、退出浏览器
   	   */

@@ -201,9 +201,12 @@
         <!-- 以下是测试脚本的测试数据 -->
         
         <Login name="登录 ">
-            <cellphone>13988880000</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
-            <checkpoint>login</checkpoint><!-- 检查点 -->
+            <!-- <cellphone>13988880000</cellphone>手机号
+            <password>123456</password>密码
+            <checkpoint>login</checkpoint>检查点 -->
+            <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
+            <checkpoint>sui_zf</checkpoint><!-- 检查点 -->
         </Login>
         
         <LoginFail name="登录，密码错误">
@@ -248,8 +251,16 @@
         </DupRegister>
         
         <Order name="上传文档，结算下单">
-            <cellphone>13988880001</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
+           <!--  <cellphone>13988880001</cellphone>手机号
+            <password>123456</password>密码
+            <pdf>F:\\testfiles\\测试文件5.pdf</pdf>pdf文件
+            <pptx>F:\\testfiles\\测试文件4.pptx</pptx>pptx文件
+            <ppt>F:\\testfiles\\测试文件3.ppt</ppt>ppt文件
+            <docx>F:\\testfiles\\测试文件2.docx</docx>docx文件
+            <doc>F:\\testfiles\\测试文件1.doc</doc>doc文件
+            <checkpoint>我的收银台</checkpoint>检查点（支付宝页面） -->
+             <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
             <pdf>F:\\testfiles\\测试文件5.pdf</pdf><!-- pdf文件 -->
             <pptx>F:\\testfiles\\测试文件4.pptx</pptx><!-- pptx文件 -->
             <ppt>F:\\testfiles\\测试文件3.ppt</ppt><!-- ppt文件 -->
@@ -259,8 +270,10 @@
         </Order>
         
         <CancelOrder name="取消订单">
-            <cellphone>13988880001</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
+            <!-- <cellphone>13988880001</cellphone>手机号
+            <password>123456</password>密码 -->
+            <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
             <tips>取消订单成功!</tips><!-- 取消成功提示 -->
         </CancelOrder>
         
@@ -271,8 +284,10 @@
         </Pay>
         
         <CancelPay name="待支付订单-取消支付">
-            <cellphone>13988880001</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
+            <!-- <cellphone>13988880001</cellphone>手机号
+            <password>123456</password>密码 -->
+            <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
         </CancelPay>
         
         <PrintShop name="选择楼栋">
@@ -282,8 +297,10 @@
         </PrintShop>
         
         <ModifyData name="修改个人资料">
-            <cellphone>13988880003</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
+            <!-- <cellphone>13988880003</cellphone>手机号
+            <password>123456</password>密码 -->
+            <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
             <photo>F:\\testfiles\\P5123511.JPG</photo><!-- 头像 -->
             <realname>测试用户</realname><!-- 姓名 -->
             <username>ModifyData</username><!-- 用户名 -->
@@ -297,8 +314,12 @@
         </ModifyData>
         
         <ModifyPwd name="安全中心-修改密码-还原密码">
-            <cellphone>13988880005</cellphone><!-- 手机号 -->
-            <password>123456</password><!-- 密码 -->
+            <!-- <cellphone>13988880005</cellphone>手机号
+            <password>123456</password>密码
+            <newpwd>1234567</newpwd>新密码
+            <tips>修改成功</tips>提示修改成功 -->
+            <cellphone>15261672979</cellphone><!-- 手机号 -->
+            <password>Suiyin888001</password><!-- 密码 -->
             <newpwd>1234567</newpwd><!-- 新密码 -->
             <tips>修改成功</tips><!-- 提示修改成功 -->
         </ModifyPwd>

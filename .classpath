@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="src/lib/selenium-java-2.52.0-srcs.jar"/>
 	<classpathentry kind="lib" path="src/lib/selenium-java-2.52.0.jar"/>
 	<classpathentry kind="lib" path="src/lib/selenium-server-standalone-2.52.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdbc"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

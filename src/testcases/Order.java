@@ -27,7 +27,7 @@ public class Order extends CommonFunctions {
 	
   
 	@BeforeClass
-	public void before() throws Exception {
+	public void beforeClass() throws Exception {
 		/*//打开网页
 		String url="http://test2.sui.me/";
 		comfun=new CommonFunctions(url);
@@ -85,7 +85,7 @@ public class Order extends CommonFunctions {
  
 
     @AfterClass
-    public void after() {
+    public void afterClass() {
     	/**
   	   * 截图、退出浏览器
   	   */

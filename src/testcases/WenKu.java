@@ -23,7 +23,7 @@ public class WenKu extends CommonFunctions{
      public DataReader dr;*/
   
      @BeforeClass
-     public void before() throws Exception{
+     public void beforeClass() throws Exception{
         /*String url = "http://test2.sui.me/";
         comfun=new CommonFunctions(url);
         dr=new DataReader();
@@ -39,7 +39,7 @@ public class WenKu extends CommonFunctions{
        //comfun.login(dr.readnodevalue(params,"Login","cellphone"),dr.readnodevalue(params,"Login","password"));
        //comfun.checkequal(dr.readnodevalue(params,"Login","checkpoint"),comfun.gettext("xpath",dr.readnodevalue(params,"HomePage","personal")));
        //登录
-       login("15261672979","1234567");
+       login("15261672979","Suiyin888001");
        //切换到文库页面
        clickitem("xpath",dr.readnodevalue(params,"HomePage","library"));
        Thread.sleep(3000);
@@ -65,7 +65,7 @@ public class WenKu extends CommonFunctions{
     }
   
     @AfterClass
-    public void after() {
+    public void afterClass() {
     	/**
     	 *截图、退出浏览器
     	 */
